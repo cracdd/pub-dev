@@ -52,7 +52,8 @@
       name: 'name',
       align: 'center',
       label: '등록날짜',
-      field: 'name',
+      field: (row) => row.name,
+      format: (val) => `${val}`,
     },
     {
       name: 'time',
@@ -82,11 +83,7 @@
   ];
   const selected = ref([]);
   function getSelectedString() {
-    return selected.value.length === 0
-      ? ''
-      : `${selected.value.length} record${
-          selected.value.length > 1 ? 's' : ''
-        } selected of ${rows.length}`;
+    return '';
   }
 </script>
 <style scoped>

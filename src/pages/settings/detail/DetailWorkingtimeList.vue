@@ -48,13 +48,14 @@
       align: 'center',
       label: '사용자ID',
       field: 'user_id',
-      //sortable: true,
     },
     {
       name: 'name',
       align: 'center',
       label: '사용자명',
-      field: 'name',
+      field: (row) => row.name,
+      format: (val) => `${val}`,
+      //sortable: true,
     },
     {
       name: 'date',
@@ -100,11 +101,7 @@
   ];
   const selected = ref([]);
   function getSelectedString() {
-    return selected.value.length === 0
-      ? ''
-      : `${selected.value.length} record${
-          selected.value.length > 1 ? 's' : ''
-        } selected of ${rows.length}`;
+    return '';
   }
 </script>
 
