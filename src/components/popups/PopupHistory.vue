@@ -1,6 +1,6 @@
 <template>
   <div class="popup-container" :class="visible ? 'active' : ''">
-    <div class="popup-wrap type_split"><!--250428 type_split 클래스 추가-->
+    <div class="popup-wrap type_split"><!--type_split 클래스 추가-->
       <div class="popup-header">
         <a href="#" class="close" @click.prevent="onClose"></a>
       </div>
