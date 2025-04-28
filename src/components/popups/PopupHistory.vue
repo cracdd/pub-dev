@@ -1,6 +1,6 @@
 <template>
   <div class="popup-container" :class="visible ? 'active' : ''">
-    <div class="popup-wrap type_split"><!--type_split 클래스 추가-->
+    <div class="popup-wrap type_split">
       <div class="popup-header">
         <a href="#" class="close" @click.prevent="onClose"></a>
       </div>
@@ -347,7 +347,7 @@
   ]);
 </script>
 
-<style>
+<style scoped>
   .popup_wrap.type_split {
     position: relative;
   }
@@ -367,20 +367,20 @@
     flex-direction: column;
   }
 
-  .popup_wrap.type_split .popup-body .split-box section.left .content {
+  section.left .content {
     display: flex;
     flex: 1;
     min-height: 10px;
     margin-top: 10px;
-  }
+  }  
 
-  .popup_wrap.type_split .popup-body .split-box section.right .content {
+  section.right .content {
     flex: 1;
     min-height: 10px;
     display: flex;
     flex-direction: column;
   }
-  .popup_wrap.type_split
+  .popup_wrap
     .popup-body
     .split-box
     section.right
