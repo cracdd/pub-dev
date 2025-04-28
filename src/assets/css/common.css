@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /* @extend */
-.flex-center, .flex-row {
+.flex-center,
+.flex-row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -52,27 +53,28 @@
 }
 
 :root {
-  font-family: "Pretendard", "Malgun Gothic", "맑은고딕", -apple-system, "돋움", "dotum", sans-serif;
+  font-family: 'Pretendard', 'Malgun Gothic', '맑은고딕', -apple-system, '돋움',
+    'dotum', sans-serif;
   font-size: 14px;
   color: #1d1d1d;
-  --color-primary-code:248,153,2;
+  --color-primary-code: 248, 153, 2;
   --color-primary: rgb(var(--color-primary-code));
-  --color-secondary: #6C6155;
-  --color-success: #3AAF3A;
-  --color-danger: #E34D4D;
+  --color-secondary: #6c6155;
+  --color-success: #3aaf3a;
+  --color-danger: #e34d4d;
   --color-warning: #ff8227;
   --color-info: #0c96e9;
   --color-dark: #333;
-  --color-primary-a: rgba(var(--color-primary-code), .1);
-  --color-secondary-a: #8B847D;
-  --color-success-a: #71D671;
-  --color-danger-a: #F77070;
+  --color-primary-a: rgba(var(--color-primary-code), 0.1);
+  --color-secondary-a: #8b847d;
+  --color-success-a: #71d671;
+  --color-danger-a: #f77070;
   --color-warning-a: #f9af3e1a;
   --color-info-a: #32b33d1a;
   --color-dark-a: #767676;
   --color-black: #000;
   --color-white: #fff;
-  --color-gray-base: #8891A1;
+  --color-gray-base: #8891a1;
   --color-gray-1: #111;
   --color-gray-2: #222;
   --color-gray-3: #333;
@@ -87,7 +89,7 @@
   --color-gray-e: #eee;
   --color-input: #1d1d1d;
   --color-input-border: #dedede;
-  --color-input-border-focus: #1D1D1D;
+  --color-input-border-focus: #1d1d1d;
   --color-placeholder: #767676;
   --color-disabled: #999;
   --color-disabled-bg: #f5f5f7;
@@ -96,19 +98,22 @@
   --color-readonly-bg: #f0f3f9;
   --color-readonly-border: #e0e3ec;
   --color-hover-bg: #f2f2f2;
-  --color-body-bg: #F7F8FC;
-  --color-loading:#ddd;
+  --color-body-bg: #f7f8fc;
+  --color-loading: #ddd;
 }
 
 /* form */
-*:disabled, [disabled], .disabled {
+*:disabled,
+[disabled],
+.disabled {
   background: var(--color-disabled-bg) !important;
   border: 1px solid var(--color-disabled-border) !important;
   color: var(--color-disabled) !important;
   pointer-events: none;
 }
 
-[readonly], .readonly {
+[readonly],
+.readonly {
   background: var(--color-readonly-bg) !important;
   border: 1px solid var(--color-readonly-border) !important;
   color: var(--color-readonly) !important;
@@ -491,6 +496,10 @@
   margin-left: 5px !important;
 }
 
+.ml6 {
+  margin-left: 5px !important;
+}
+
 .ml10 {
   margin-left: 10px !important;
 }
@@ -748,11 +757,18 @@
   white-space: normal;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 700;
 }
 
-h3, h4, h5 {
+h3,
+h4,
+h5 {
   display: block;
   color: var(--color-gray-2);
 }
@@ -902,23 +918,28 @@ h6 {
   height: 1px;
 }
 
-.gap-xs, .gap4 {
+.gap-xs,
+.gap4 {
   gap: 4px !important;
 }
 
-.gap-sm, .gap8 {
+.gap-sm,
+.gap8 {
   gap: 8px !important;
 }
 
-.gap-md, .gap16 {
+.gap-md,
+.gap16 {
   gap: 16px !important;
 }
 
-.gap-lg, .gap32 {
+.gap-lg,
+.gap32 {
   gap: 32px !important;
 }
 
-.gap-xlg, .gap52 {
+.gap-xlg,
+.gap52 {
   gap: 52px !important;
 }
 

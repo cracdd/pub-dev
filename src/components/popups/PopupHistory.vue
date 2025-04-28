@@ -1,6 +1,6 @@
 <template>
   <div class="popup-container" :class="visible ? 'active' : ''">
-    <div class="popup-wrap type_split">
+    <div class="popup-wrap type-split">
       <div class="popup-header">
         <a href="#" class="close" @click.prevent="onClose"></a>
       </div>
@@ -8,7 +8,7 @@
         <div class="split-box">
           <!-- left -->
           <section class="left">
-            <div class="text-title md mb20">통화 상세정보</div>
+            <div class="text-title mb20">통화 상세정보</div>
             <div class="IncidentType">
               <div class="form-mix">
                 <div class="input-mix w160px">
@@ -122,7 +122,7 @@
           </section>
           <!-- right -->
           <section class="right">
-            <div class="text-title md mb20">상담 요약</div>
+            <div class="text-title mb20">상담 요약</div>
             <div class="content">
               <div class="form-col-wrap type-column summary-item">
                 <p class="summary-title">고애주님(2025-0101012345)</p>
@@ -348,39 +348,40 @@
 </script>
 
 <style scoped>
-  .popup_wrap.type_split {
+  .popup-wrap.type-split {
     position: relative;
   }
-  .popup_wrap.type_split .popup-header {
+  .popup-wrap.type-split .popup-header {
     position: absolute !important;
     right: 37px;
     top: 20px;
   }
-  .popup_wrap.type_split .popup-body {
+  .popup-wrap.type-split .popup-body {
     height: calc(100vh - 100px);
   }
-  .popup_wrap.type_split .popup-body .split-box {
+  .popup-wrap.type-split .popup-body .split-box {
     height: inherit;
   }
-  .popup_wrap.type_split .popup-body .split-box section {
+  .popup-wrap.type-split .popup-body .split-box section {
     display: flex;
     flex-direction: column;
   }
-
-  section.left .content {
+  .popup-wrap.type-split .popup-body .split-box section .text-title {
+    font-size: 16px;
+  }
+  .popup-wrap.type-split .popup-body .split-box section.left .content {
     display: flex;
     flex: 1;
     min-height: 10px;
     margin-top: 10px;
-  }  
-
-  section.right .content {
+  }
+  .popup-wrap.type-split .popup-body .split-box section.right .content {
     flex: 1;
     min-height: 10px;
     display: flex;
     flex-direction: column;
   }
-  .popup_wrap
+  .popup-wrap
     .popup-body
     .split-box
     section.right

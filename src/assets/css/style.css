@@ -1474,10 +1474,12 @@ select:hover {
 .input-mix.type-timer .unit {
   color: var(--color-danger);
 }
-.input-mix.type-datepicker [readonly] {
+.input-mix.type-datepicker [readonly],
+.input-mix.type-timepicker [readonly] {
   pointer-events: all;
 }
-.input-mix.type-datepicker input {
+.input-mix.type-datepicker input,
+.input-mix.type-timepicker input {
   width: 100%;
   background: #fff !important;
   border: none !important;
@@ -1489,7 +1491,14 @@ select:hover {
   background: url(../images/ico-calendar.svg) 50% 50% no-repeat;
   cursor: pointer;
 }
-.input-mix.type-datepicker:focus-within {
+.input-mix.type-timepicker .btn-ico {
+  width: 16px;
+  height: 16px;
+  background: url(../images/ico-clock.svg) 50% 50% no-repeat;
+  cursor: pointer;
+}
+.input-mix.type-datepicker:focus-within,
+.input-mix.type-timepicker:focus-within {
   border-color: var(--color-input-border) !important;
 }
 .input-mix .remove {
@@ -3021,6 +3030,11 @@ h5.guide-tit {
         border-radius: 4px;
       }
     }
+    thead {
+      tr {
+        height: auto;
+      }
+    }
   }
 }
 .sum td {
@@ -3052,6 +3066,6 @@ h5.guide-tit {
 .settings-mid .form-box label {
   width: 80px;
 }
-.settings-mid .form-box .form-mix {
-  margin-bottom: 12px;
+.settings-mid .form-box .form-mix + .form-mix {
+  margin-top: 12px;
 }

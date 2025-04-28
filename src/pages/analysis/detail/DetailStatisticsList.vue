@@ -295,7 +295,7 @@
     },
   ];
 </script>
-<style>
+<style scoped>
   .toggle-box {
     position: absolute;
     left: 0;

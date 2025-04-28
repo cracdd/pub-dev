@@ -51,7 +51,6 @@
       <template v-slot:top-right>
         <a class="btn-sm btn-soft">삭제</a>
       </template>
-      <div class="q-mt-md">Selected: {{ JSON.stringify(selected) }}</div>
     </q-table>
   </section>
 </template>
@@ -63,10 +62,10 @@
 
   const columns = [
     {
-      name: 'except',
+      name: 'name',
       align: 'center',
       label: '제외번호',
-      field: 'except',
+      field: 'name',
       sortable: true,
     },
     {
@@ -94,7 +93,19 @@
 
   const rows = [
     {
-      except: '2025-03-01 09:06',
+      name: '2025-03-01 09:02',
+      setting: 'I/B',
+      date: 'N',
+      note: '00:00:00',
+    },
+    {
+      name: '2025-03-01 09:04',
+      setting: 'I/B',
+      date: 'N',
+      note: '00:00:00',
+    },
+    {
+      name: '2025-03-01 09:06',
       setting: 'I/B',
       date: 'N',
       note: '00:00:00',
