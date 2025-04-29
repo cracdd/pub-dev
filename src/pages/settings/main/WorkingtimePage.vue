@@ -29,7 +29,8 @@
         class="table-wrap type-data"
       >
         <template v-slot:top-right>
-          <a class="btn-sm btn-basic">등록</a
+          <a class="btn-sm btn-basic" @click="openPopupWorkingTimeRegister()"
+            >등록</a
           ><a class="btn-sm btn-basic ml6">삭제</a>
         </template>
         <template v-slot:body-cell-modify="props">
@@ -46,14 +47,15 @@
   import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
   import { global } from 'assets/js/publish/global';
   import CallTimeBox from 'components/CallTimeBox.vue';
+  import { usePopupStore } from 'stores/popup';
+  import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
 
   const columns = [
     {
       name: 'name',
       align: 'center',
       label: '등록날짜',
-      field: (row) => row.name,
-      format: (val) => `${val}`,
+      field: 'name',
     },
     {
       name: 'time',
@@ -83,8 +85,18 @@
   ];
   const selected = ref([]);
   function getSelectedString() {
-    return '';
+    return selected.value.length === 0
+      ? ''
+      : `${selected.value.length} record${
+          selected.value.length > 1 ? 's' : ''
+        } selected of ${rows.length}`;
   }
+
+  const popup = usePopupStore();
+
+  const openPopupWorkingTimeRegister = () => {
+    popup.open(POPUP_TYPES.REGISTER_WORKING, {});
+  };
 </script>
 <style scoped>
   .tbl-box {

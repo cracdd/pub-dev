@@ -4,4 +4,6 @@ export const POPUP_TYPES = {
   ALERT: 'popupAlert',
   CONFIRM: 'popupConfirm',
   HISTORY: 'popupHistory',
+  REGISTER_WORKING: 'PopupWorkingTimeRegister',
+  REGISTER_HOLIDAY: 'PopupHolidayRegister',
 };

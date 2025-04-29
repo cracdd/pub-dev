@@ -18,7 +18,8 @@
           class="table-wrap type-data"
         >
           <template v-slot:top-right>
-            <a class="btn-sm btn-basic">등록</a
+            <a class="btn-sm btn-basic" @click="openPopupHolidayRegister()"
+              >등록</a
             ><a class="btn-sm btn-basic ml6">삭제</a>
           </template>
           <template v-slot:body-cell-modify="props">
@@ -41,6 +42,8 @@
 <script setup>
   import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
   import { global } from 'assets/js/publish/global';
+  import { usePopupStore } from 'stores/popup';
+  import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
 
   const columns = [
     {
@@ -103,6 +106,11 @@
   function getSelectedString() {
     return '';
   }
+  const popup = usePopupStore();
+
+  const openPopupHolidayRegister = () => {
+    popup.open(POPUP_TYPES.REGISTER_HOLIDAY, {});
+  };
 </script>
 
 <style scoped>

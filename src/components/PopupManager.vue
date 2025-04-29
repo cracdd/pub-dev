@@ -15,6 +15,8 @@
   import PopupFormDirect from 'components/popups/PopupFormDirect.vue';
   import popupAlert from 'components/popups/popupAlert.vue';
   import PopupHistory from 'components/popups/PopupHistory.vue';
+  import PopupWorkingTimeRegister from 'components/popups/PopupWorkingTimeRegister.vue';
+  import PopupHolidayRegister from 'components/popups/PopupHolidayRegister.vue';
   import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
 
   const popup = usePopupStore();
@@ -25,5 +27,7 @@
     [POPUP_TYPES.DIRECT]: PopupFormDirect,
     [POPUP_TYPES.ALERT]: popupAlert,
     [POPUP_TYPES.HISTORY]: PopupHistory,
+    [POPUP_TYPES.REGISTER_WORKING]: PopupWorkingTimeRegister,
+    [POPUP_TYPES.REGISTER_HOLIDAY]: PopupHolidayRegister,
   };
 </script>

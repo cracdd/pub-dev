@@ -3069,3 +3069,30 @@ h5.guide-tit {
 .settings-mid .form-box .form-mix + .form-mix {
   margin-top: 12px;
 }
+
+.register-box {
+  padding-top: 20px;
+}
+.register-box .form-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+.register-box .form-box .form-mix label:not(.checkbox-item) {
+  font-weight: 600;
+  flex-basis: 86px;
+}
+.register-box .form-box .form-mix label:not(.checkbox-item) + * {
+  flex: 1;
+}
+.register-box .period-box {
+  width: 100%;
+}
+.register-box .input-mix.type-timepicker {
+  flex: 1;
+}
+.register-box .type-datepicker {
+  flex: 1;
+}
