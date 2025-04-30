@@ -21,7 +21,7 @@
           <th>사원명</th>
           <td><input type="text" placeholder="사원명" class="w140px" /></td>
           <th>사번</th>
-          <td><input type="text" placeholder="사번번" class="w140px" /></td>
+          <td><input type="text" placeholder="사번" class="w140px" /></td>
           <th>부서</th>
           <td>
             <select class="w140px">
@@ -229,6 +229,5 @@ const columns = [
 </script>
 
 <style lang="scss" scoped>
-@import "/src/assets/css/set.scss";
-
+  @import "/src/assets/css/set.scss";
 </style>
