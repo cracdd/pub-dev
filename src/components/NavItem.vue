@@ -88,6 +88,7 @@ const sideList = ref([
       { label: '지식창고관리', path: 'knowledgeadmin' },
       { label: '사용자 및 부서 관리', path: 'usergroup' },
       { label: '모바일 로그', path: 'mobilelog' },
+      { label: '이력 로그', path: 'userhistorylog' },
       { label: '시스템설정', path: 'system' }
     ]
   }

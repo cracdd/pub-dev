@@ -185,6 +185,12 @@ const routes = [
           detail: () => import('pages/settings/detail/DetailSystem.vue')
         }
       },
+      { path: 'userhistorylog',
+        components: {
+          main: () => import('pages/settings/main/UserHistoryLogPage.vue'),
+          detail: () => import('src/pages/settings/detail/DetailUserHistoryLogList.vue')
+        }
+      },
     ],
   },
   {
