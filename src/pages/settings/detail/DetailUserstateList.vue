@@ -42,9 +42,41 @@
       2022-08-08 10:45:25
       <button type="button" class="play"></button>
       <button type="button" class="refresh"></button>
-      <button type="button" class="setting"></button>
+      <button type="button" class="setting" id="popup-btn" @click="toggleDiv"></button>
     </div>
   </div>
+  
+  <!--자동갱신주기 팝업-->
+  <div v-show="isVisible" class="popup">
+    <p class="text-title">자동 갱신 주기</p>
+    <div class="choice">
+      <label class="radio-item">
+        <input type="radio" name="radio1" checked>
+        <span>5초</span>
+      </label>
+
+      <label class="radio-item">
+        <input type="radio" name="radio2">
+        <span>10초</span>
+      </label>
+
+      <label class="radio-item">
+        <input type="radio" name="radio3">
+        <span>20초</span>
+      </label>
+
+      <label class="radio-item">
+        <input type="radio" name="radio4">
+        <span>30초</span>
+      </label>      
+    </div>
+    <div class="btnArea-R">
+      <a class="btn-sm btn-basic" @click="toggleDiv">닫기</a>
+      <a href="javascript:;" class="btn-sm btn-secondary">적용</a>
+    </div>
+  </div>
+
+
   <section class="realTimeStatus">
       <div>로그인<span>1</span></div>
       <div>대기<span>0</span></div>
@@ -88,6 +120,7 @@
       :hide-pagination="true"
       class="table-wrap type-data"
     >
+      <!-- 컬럼에 버튼 추가 -->
       <template v-slot:body-cell-logout="props">
         <q-td key="logout" :props="props">
             <a class="btn-sm btn-soft">로그아웃</a>
@@ -110,6 +143,14 @@
 import { defineProps, defineEmits, ref, onMounted, watch } from 'vue'
 import { global } from 'assets/js/publish/global'
 
+//팝업
+const isVisible = ref(false)
+
+const toggleDiv = () => {
+  isVisible.value = !isVisible.value
+}
+
+//테이블
 const columns = [    
     {
       name: 'ID',
