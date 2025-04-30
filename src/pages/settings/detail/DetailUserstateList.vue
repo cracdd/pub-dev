@@ -76,7 +76,6 @@
     </div>
   </div>
 
-
   <section class="realTimeStatus">
       <div>로그인<span>1</span></div>
       <div>대기<span>0</span></div>
