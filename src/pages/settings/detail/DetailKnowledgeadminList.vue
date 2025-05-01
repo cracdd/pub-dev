@@ -1,5 +1,4 @@
 <template>
-
   <!--admin-->
   <section class="card">
     <div class="titleBox mb30">
@@ -13,8 +12,8 @@
     <div class="adminBox">
       <table>
         <colgroup>
-          <col style="width:20%"/>
-          <col style="width:80%"/>
+          <col style="width: 20%" />
+          <col style="width: 80%" />
         </colgroup>
         <tr>
           <th>상위메뉴</th>
@@ -39,14 +38,7 @@
         <tr>
           <th>만료날짜</th>
           <td>
-            <div class="form-mix">
-              <div class="input-mix type-datepicker w400px">
-                <span class="unit">
-                  <a href="javascript:;" class="btn-ico type-text"></a>
-                </span>
-                <input type="text" placeholder="yyyy-mm-dd" value="2022-11-01" readonly />
-              </div>
-            </div>
+            <CallDateBox />
           </td>
         </tr>
         <tr>
@@ -62,11 +54,11 @@
           <td>
             <div class="radioBox">
               <label class="radio-item">
-                <input type="radio" name="radio1" checked>
+                <input type="radio" name="radio1" checked />
                 <span>Y</span>
               </label>
               <label class="radio-item">
-                <input type="radio" name="radio1">
+                <input type="radio" name="radio1" />
                 <span>N</span>
               </label>
             </div>
@@ -75,7 +67,10 @@
         <tr>
           <th class="memo">설명</th>
           <td class="memo">
-            <textarea class="h150px" placeholder="내용을 입력하세요."></textarea>
+            <textarea
+              class="h150px"
+              placeholder="내용을 입력하세요."
+            ></textarea>
           </td>
         </tr>
       </table>
@@ -100,7 +95,7 @@
       <select class="w130px">
         <option>선택</option>
       </select>
-      <input type="text" class="w100p">
+      <input type="text" class="w100p" />
       <a href="javascript:;" class="btn-md btn-basic">검색</a>
     </div>
 
@@ -111,9 +106,6 @@
       :rows="rows"
       :columns="columns"
       row-key="name"
-      :selected-rows-label="getSelectedString"
-      selection="multiple"
-      v-model:selected="selected"
       virtual-scroll
       :hide-pagination="true"
       class="table-wrap type-data"
@@ -139,13 +131,15 @@
       <p class="date">2025-03-14</p>
       <div class="viewBox__content">
         본문 내용 <br />
-        본문 내용 
+        본문 내용
       </div>
       <div class="viewBox__file">
         <div class="viewBox__file__title">첨부파일</div>
         <div class="viewBox__file__list">
           주택화재 손해 인정 기준 안내.docx
-          <a href="javascript:;" class="btn-sm btn-ghost"><span class="upload"></span> 내려받기</a>
+          <a href="javascript:;" class="btn-sm btn-ghost"
+            ><span class="upload"></span> 내려받기</a
+          >
         </div>
       </div>
     </div>
@@ -166,7 +160,7 @@
     </div>
     <div class="editBox">
       <h4>제목</h4>
-      <input type="text" class="w100p"/>
+      <input type="text" class="w100p" />
 
       <h4>내용</h4>
       <q-editor
@@ -178,14 +172,16 @@
           ['bold', 'italic', 'underline', 'strike'],
           ['quote', 'unordered', 'ordered'],
           ['undo', 'redo'],
-          ['link', 'image']
+          ['link', 'image'],
         ]"
       />
-      
+
       <h4>첨부파일</h4>
       <!--등록전-->
       <div class="editBox__file">
-        <a href="javascript:;" class="btn-sm btn-ghost">파일 선택</a>
+        <q-file v-model="files" label="파일 선택" outlined multiple use-chips
+          ><span class="file-label">파일선택</span></q-file
+        >
         <p>업로드 할 파일을 선택해 주세요.</p>
       </div>
       <!--등록후-->
@@ -211,11 +207,11 @@
       </div>
       <div class="editBox__radio">
         <label class="radio-item">
-          <input type="radio" name="radio1" checked>
+          <input type="radio" name="radio1" checked />
           <span>내용등록</span>
         </label>
         <label class="radio-item">
-          <input type="radio" name="radio1">
+          <input type="radio" name="radio1" />
           <span>PDF 등록</span>
         </label>
       </div>
@@ -225,16 +221,17 @@
     <a href="javascript:;" class="btn-md btn-ghost">취소</a>
     <a href="javascript:;" class="btn-md btn-secondary">저장</a>
   </div>
-
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, onMounted, watch } from 'vue'
-import { global } from 'assets/js/publish/global'
-const content = ref('')
+  import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
+  import { global } from 'assets/js/publish/global';
+  import CallDateBox from 'components/CallDateBox.vue';
+  const content = ref('');
+  const files = ref(null);
 
-//테이블
-const columns = [
+  //테이블
+  const columns = [
     {
       name: 'no',
       align: 'center',
@@ -265,34 +262,27 @@ const columns = [
 
   const rows = [
     {
-      no:'1',
-      title:'게시글 제목',
-      date:'2025.04.10',
-      count:'12'
+      no: '1',
+      title: '게시글 제목',
+      date: '2025.04.10',
+      count: '12',
     },
     {
-      no:'1',
-      title:'게시글 제목',
-      date:'2025.04.10',
-      count:'12'
+      no: '1',
+      title: '게시글 제목',
+      date: '2025.04.10',
+      count: '12',
     },
   ];
-  const selected = ref([]);
-
-  function getSelectedString() {
-    return '';
-  }
-
 </script>
 
 <style lang="scss" scoped>
   @import '/src/assets/css/set.scss';
 </style>
 
-
-
 <style>
-/* ★ 한 화면에 리스트, 뷰, 쓰기 다 보이게 하기 위해서 임시로 넣은 스타일, 개발시 삭제 */
-.contents-r{ display:inline;}
+  /* ★ 한 화면에 리스트, 뷰, 쓰기 다 보이게 하기 위해서 임시로 넣은 스타일, 개발시 삭제 */
+  .contents-r {
+    display: inline;
+  }
 </style>
-
