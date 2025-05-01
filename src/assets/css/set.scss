@@ -92,10 +92,8 @@ $colorBox-yellow:#f1c35b;
 
 
 //★Detail
-    .contents-r{
+    .contents-r{        
         
-//*****사용자 상태 *******
-
         .realtime__title{
             /*실시간현황*/
             .text-md{
@@ -224,6 +222,164 @@ $colorBox-yellow:#f1c35b;
             }
 
         }// durationSetting
+
+        .card{
+            .titleBox{
+                @include between();
+                margin-bottom:30px;
+                &__btns{
+                    a{
+                        margin-left:6px;
+                    }
+                }
+            }
+
+            .viewBox{
+                h1{
+                    color:#1d1d1d;
+                    font-weight: bold;
+                    margin-bottom: 24px;
+                    line-height: 30px;
+                }
+                .date{
+                    display: block;
+                    font-size: 15px;
+                    color:#767676;
+                    padding-bottom: 18px;
+                    border-bottom: 1px solid #dedede;
+                    margin-bottom: 48px;
+                }
+                &__content{
+                    color:#1d1d1d;
+                    font-size:14px;
+                    margin-bottom:24px;
+                }
+                &__file{
+                    background-color: #f5f5f7;
+                    padding:20px 16px;
+                    border-radius: 8px;
+                    &__title{
+                        display: block;
+                        padding-left:20px;
+                        padding-bottom: 15px;
+                        border-bottom: 1px solid #dedede;
+                        @include bgStyle("ico-attachment.svg", 16px);
+                        background-position: 1px 2px;
+                        font-weight: bold;
+                    }
+                    &__list{
+                        @include between();
+                        margin-top:12px;
+                        .btn-sm{
+                            padding:7px 10px;
+                            .upload{
+                                display: inline-block;
+                                width:16px;
+                                height:16px;
+                                @include bgStyle("ico-upload.svg", 16px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .editBox{
+                h4{
+                   font-size: 14px;
+                   color:#1d1d1d;
+                   margin:20px 0 10px;
+                   line-height: 18px; 
+                }
+                &__file{
+                    background-color:#fafafa;
+                    border:1px dotted #dedede;
+                    border-radius: 8px;
+                    text-align: center;
+                    padding:58px 0;
+                    .btn-sm{
+                        box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.08);
+                    }
+                    p{
+                        color:#767676;
+                        font-size: 12px;
+                        margin-top:16px;
+                    }
+                }
+                &__file--list{
+                    border:1px dotted #dedede;
+                    border-radius: 8px;
+                    padding:16px;
+                    height:175px;
+                    overflow-y: auto;
+                    ul{
+                        li{
+                            @include between();
+                            padding:10px 0;
+                            font-size:12px;
+                            color:#1d1d1d;
+                            .Btn-delete{
+                              font-size:12px;
+                              color:#333;
+                              @include bgStyle("ico-clear.svg", 16px);
+                              background-position:right center;
+                              padding-right:18px;
+                              background-color:#fff;  
+                            }
+                        }
+                    }
+                }
+                &__radio{
+                    margin:30px 0 10px;
+                    label{
+                        margin-right:24px;
+                    }
+                }
+            }
+
+            .adminBox{
+                border:1px solid #dedede;
+                border-radius: 8px;
+                table{
+                    width:100%;
+                    th, td{
+                        height:60px;
+                        border-bottom:1px solid #dedede;
+                    }
+                    th{
+                       width:130px; 
+                       border-right:1px solid #dedede;
+                       background-color:#f5f5f7;
+                       font-size:14px;
+                       color:#1d1d1d;
+                       font-weight: 600;
+                       text-align: left;
+                       padding-left:20px;
+                       &:first-child{
+                        border-top-left-radius: 8px;
+                       }
+                       &.memo{
+                        border-bottom-left-radius: 8px;
+                        border-bottom: 0;
+                        height: 174px;
+                       }
+                    }
+                    td{
+                        padding-left:12px;
+                        &.memo{
+                            border-bottom: 0;  
+                        }
+                        .radioBox{
+                            label{
+                                margin-right:24px;
+                            }
+                        }
+                        textarea{
+                            width:calc(100% - 12px);
+                        }
+                    }
+                }
+            }
+        }
 
 
 
