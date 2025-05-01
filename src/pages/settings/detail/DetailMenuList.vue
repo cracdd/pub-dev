@@ -11,8 +11,8 @@
     <div class="adminBox">
       <table>
         <colgroup>
-          <col style="width:20%"/>
-          <col style="width:80%"/>
+          <col style="width: 20%" />
+          <col style="width: 80%" />
         </colgroup>
         <tr>
           <th>상위메뉴</th>
@@ -37,14 +37,7 @@
         <tr>
           <th>만료날짜</th>
           <td>
-            <div class="form-mix">
-              <div class="input-mix type-datepicker w400px">
-                <span class="unit">
-                  <a href="javascript:;" class="btn-ico type-text"></a>
-                </span>
-                <input type="text" placeholder="yyyy-mm-dd" value="2022-11-01" readonly />
-              </div>
-            </div>
+            <CallDateBox />
           </td>
         </tr>
         <tr>
@@ -60,11 +53,11 @@
           <td>
             <div class="radioBox">
               <label class="radio-item">
-                <input type="radio" name="radio1" checked>
+                <input type="radio" name="radio1" checked />
                 <span>Y</span>
               </label>
               <label class="radio-item">
-                <input type="radio" name="radio1">
+                <input type="radio" name="radio1" />
                 <span>N</span>
               </label>
             </div>
@@ -73,7 +66,10 @@
         <tr>
           <th class="memo">설명</th>
           <td class="memo">
-            <textarea class="h150px" placeholder="설명을 입력해주세요."></textarea>
+            <textarea
+              class="h150px"
+              placeholder="설명을 입력해주세요."
+            ></textarea>
           </td>
         </tr>
       </table>
@@ -88,6 +84,7 @@
 <script setup>
   import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
   import { global } from 'assets/js/publish/global';
+  import CallDateBox from 'components/CallDateBox.vue';
 </script>
 
 <style lang="scss" scoped>
