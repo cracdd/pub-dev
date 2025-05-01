@@ -56,17 +56,17 @@
       </label>
 
       <label class="radio-item">
-        <input type="radio" name="radio2">
+        <input type="radio" name="radio1">
         <span>10초</span>
       </label>
 
       <label class="radio-item">
-        <input type="radio" name="radio3">
+        <input type="radio" name="radio1">
         <span>20초</span>
       </label>
 
       <label class="radio-item">
-        <input type="radio" name="radio4">
+        <input type="radio" name="radio1">
         <span>30초</span>
       </label>      
     </div>
