@@ -7,30 +7,30 @@ const routes = [
         path: '',
         components: {
           main: () => import('pages/Home/main/MyPhonePage.vue'),
-          detail: () => import('pages/Home/detail/DetailCall.vue')
-        }
+          detail: () => import('pages/Home/detail/DetailCall.vue'),
+        },
       },
       {
         path: 'myphone',
         components: {
           main: () => import('pages/Home/main/MyPhonePage.vue'),
-          detail: () => import('pages/Home/detail/DetailCall.vue')
-        }
+          detail: () => import('pages/Home/detail/DetailCall.vue'),
+        },
       },
       {
         path: 'detailmsg',
         components: {
           main: () => import('pages/Home/main/MyPhonePage.vue'),
-          detail: () => import('pages/Home/detail/DetailMsg.vue')
-        }
+          detail: () => import('pages/Home/detail/DetailMsg.vue'),
+        },
       },
       {
         path: 'mobilebox',
         components: {
           main: () => import('pages/Home/main/MobileboxPage.vue'),
-          detail: () => import('pages/Home/detail/DetailMobileList.vue')
-        }
-      }
+          detail: () => import('pages/Home/detail/DetailMobileList.vue'),
+        },
+      },
     ],
   },
   {
@@ -41,47 +41,52 @@ const routes = [
         path: '',
         components: {
           main: () => import('pages/knowledge/main/ManualPage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailManualList.vue')
-        }
+          detail: () => import('pages/knowledge/detail/DetailManualList.vue'),
+        },
       },
       {
         path: 'manual',
         components: {
           main: () => import('pages/knowledge/main/ManualPage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailManualList.vue')
-        }
+          detail: () => import('pages/knowledge/detail/DetailManualList.vue'),
+        },
       },
       {
         path: 'manual/:id',
         name: 'manualDetail',
         components: {
           main: () => import('pages/knowledge/main/ManualPage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailManual.vue')
-        }
+          detail: () => import('pages/knowledge/detail/DetailManual.vue'),
+        },
       },
-      { path: 'case',
+      {
+        path: 'case',
         components: {
           main: () => import('pages/knowledge/main/CasePage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailCaseList.vue')
-        }
+          detail: () => import('pages/knowledge/detail/DetailCaseList.vue'),
+        },
       },
-      { path: 'guide',
+      {
+        path: 'guide',
         components: {
           main: () => import('pages/knowledge/main/GuidePage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailGuideList.vue')
-        }
+          detail: () => import('pages/knowledge/detail/DetailGuideList.vue'),
+        },
       },
-      { path: 'law',
+      {
+        path: 'law',
         components: {
           main: () => import('pages/knowledge/main/LawPage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailLawList.vue')
-        }
+          detail: () => import('pages/knowledge/detail/DetailLawList.vue'),
+        },
       },
-      { path: 'assistant',
+      {
+        path: 'assistant',
         components: {
           main: () => import('pages/knowledge/main/AssistantPage.vue'),
-          detail: () => import('pages/knowledge/detail/DetailAssistantList.vue')
-        }
+          detail: () =>
+            import('pages/knowledge/detail/DetailAssistantList.vue'),
+        },
       },
     ],
   },
@@ -89,107 +94,127 @@ const routes = [
     path: '/analysis',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '',
+      {
+        path: '',
         components: {
           main: () => import('pages/analysis/main/HistoryPage.vue'),
-          detail: () => import('pages/analysis/detail/DetailHistoryList.vue')
-        }
+          detail: () => import('pages/analysis/detail/DetailHistoryList.vue'),
+        },
       },
-      { path: 'history',
+      {
+        path: 'history',
         components: {
           main: () => import('pages/analysis/main/HistoryPage.vue'),
-          detail: () => import('pages/analysis/detail/DetailHistoryList.vue')
-        }
+          detail: () => import('pages/analysis/detail/DetailHistoryList.vue'),
+        },
       },
-      { path: 'statistics',
+      {
+        path: 'statistics',
         components: {
           main: () => import('pages/analysis/main/StatisticsPage.vue'),
-          detail: () => import('pages/analysis/detail/DetailStatisticsList.vue')
-        }
+          detail: () =>
+            import('pages/analysis/detail/DetailStatisticsList.vue'),
+        },
       },
-      { path: 'data',
+      {
+        path: 'data',
         components: {
           main: () => import('pages/analysis/main/DataPage.vue'),
-          detail: () => import('pages/analysis/detail/DetailDataList.vue')
-        }
-      }
+          detail: () => import('pages/analysis/detail/DetailDataList.vue'),
+        },
+      },
     ],
   },
   {
     path: '/settings',
     component: () => import('layouts/MainLayout.vue'),
     children: [
-      { path: '',
+      {
+        path: '',
         components: {
           main: () => import('pages/settings/main/ExceptPage.vue'),
-          detail: () => import('pages/settings/detail/DetailExceptList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailExceptList.vue'),
+        },
       },
-      { path: 'except',
+      {
+        path: 'except',
         components: {
           main: () => import('pages/settings/main/ExceptPage.vue'),
-          detail: () => import('pages/settings/detail/DetailExceptList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailExceptList.vue'),
+        },
       },
-      { path: 'exceptlog',
+      {
+        path: 'exceptlog',
         components: {
           main: () => import('pages/settings/main/ExceptlogPage.vue'),
-          detail: () => import('pages/settings/detail/DetailExceptlogList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailExceptlogList.vue'),
+        },
       },
-      { path: 'workingtime',
+      {
+        path: 'workingtime',
         components: {
           main: () => import('pages/settings/main/WorkingtimePage.vue'),
-          detail: () => import('pages/settings/detail/DetailWorkingtimeList.vue')
-        }
+          detail: () =>
+            import('pages/settings/detail/DetailWorkingtimeList.vue'),
+        },
       },
-      { path: 'userstate',
+      {
+        path: 'userstate',
         components: {
           main: () => import('pages/settings/main/UserstatePage.vue'),
-          detail: () => import('pages/settings/detail/DetailUserstateList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailUserstateList.vue'),
+        },
       },
-      { path: 'device',
+      {
+        path: 'device',
         components: {
           main: () => import('pages/settings/main/DevicePage.vue'),
-          detail: () => import('pages/settings/detail/DetailDeviceList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailDeviceList.vue'),
+        },
       },
-      { path: 'menu',
+      {
+        path: 'menu',
         components: {
           main: () => import('pages/settings/main/MenuPage.vue'),
-          detail: () => import('pages/settings/detail/DetailMobileList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailMenuList.vue'),
+        },
       },
-      { path: 'knowledgeadmin',
+      {
+        path: 'knowledgeadmin',
         components: {
           main: () => import('pages/settings/main/KnowledgeadminPage.vue'),
-          detail: () => import('pages/settings/detail/DetailKnowledgeadminList.vue')
-        }
+          detail: () =>
+            import('pages/settings/detail/DetailKnowledgeadminList.vue'),
+        },
       },
-      { path: 'usergroup',
+      {
+        path: 'usergroup',
         components: {
           main: () => import('pages/settings/main/UsergroupPage.vue'),
-          detail: () => import('pages/settings/detail/DetailUsergroupList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailUsergroupList.vue'),
+        },
       },
-      { path: 'mobilelog',
+      {
+        path: 'mobilelog',
         components: {
           main: () => import('pages/settings/main/MobilelogPage.vue'),
-          detail: () => import('pages/settings/detail/DetailMobilelogList.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailMobilelogList.vue'),
+        },
       },
-      { path: 'system',
+      {
+        path: 'system',
         components: {
           main: () => import('pages/settings/main/SystemPage.vue'),
-          detail: () => import('pages/settings/detail/DetailSystem.vue')
-        }
+          detail: () => import('pages/settings/detail/DetailSystem.vue'),
+        },
       },
-      { path: 'userhistorylog',
+      {
+        path: 'userhistorylog',
         components: {
           main: () => import('pages/settings/main/UserHistoryLogPage.vue'),
-          detail: () => import('src/pages/settings/detail/DetailUserHistoryLogList.vue')
-        }
+          detail: () =>
+            import('src/pages/settings/detail/DetailUserHistoryLogList.vue'),
+        },
       },
     ],
   },
@@ -202,8 +227,8 @@ const routes = [
   },
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue')
-  }
-]
+    component: () => import('pages/ErrorNotFound.vue'),
+  },
+];
 
-export default routes
+export default routes;
