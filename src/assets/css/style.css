@@ -3036,6 +3036,15 @@ h5.guide-tit {
       }
     }
   }
+  .q-table__bottom {
+    justify-content: flex-start;
+    padding: 0;
+    font-size: 13px;
+    font-weight: 600;
+    .q-table__separator {
+      display: none;
+    }
+  }
 }
 .sum td {
   border-top: 1px solid #dedede;

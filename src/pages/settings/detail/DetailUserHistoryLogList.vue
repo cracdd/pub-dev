@@ -74,14 +74,12 @@
       :rows="rows"
       :columns="columns"
       row-key="name"
-      :selected-rows-label="getSelectedString"
-      v-model:selected="selected"
       virtual-scroll
-      :hide-pagination="true"
+      :rows-per-page-options="[0]"
+      :pagination-label="getTotal"
       class="table-wrap type-data"
     >
     </q-table>
-    <div class="q-mt-md text-bold">총 {{ totalPrice }}건</div>
   </section>
 </template>
 
@@ -126,75 +124,63 @@
 
   const rows = [
     {
-      date: '2025-01-01 00:00:00',
+      date: '2025-01-01 00:00:01',
       connectionID: '12345678',
       ip: '1.1.1.1',
       screenID: '화면01',
       note: 'My Phone',
     },
     {
-      date: '2025-01-01 00:00:00',
+      date: '2025-01-01 00:00:02',
       connectionID: '12345678',
       ip: '1.1.1.1',
       screenID: '화면01',
       note: 'My Phone',
     },
     {
-      date: '2025-01-01 00:00:00',
+      date: '2025-01-01 00:00:03',
       connectionID: '12345678',
       ip: '1.1.1.1',
       screenID: '화면01',
       note: 'My Phone',
     },
     {
-      date: '2025-01-01 00:00:00',
+      date: '2025-01-01 00:00:04',
       connectionID: '12345678',
       ip: '1.1.1.1',
       screenID: '화면01',
       note: 'My Phone',
     },
     {
-      date: '2025-01-01 00:00:00',
+      date: '2025-01-01 00:00:05',
+      connectionID: '12345678',
+      ip: '1.1.1.1',
+      screenID: '화면01',
+      note: 'My Phone',
+    },
+    {
+      date: '2025-01-01 00:00:06',
+      connectionID: '12345678',
+      ip: '1.1.1.1',
+      screenID: '화면01',
+      note: 'My Phone',
+    },
+    {
+      date: '2025-01-01 00:00:07',
       connectionID: '12345678',
       ip: '1.1.1.1',
       screenID: '화면01',
       note: 'My Phone',
     },
   ];
-  const selected = ref([]);
 
-  function getSelectedString() {
-    return '';
+  function getTotal(start, end, total) {
+    return `총 ${total} 건`;
   }
 </script>
 
 <style lang="scss" scoped>
   @import '/src/assets/css/set.scss';
-
-  .container {
-    .contents-r {
-      .card-top {
-        .tbl-detail-box {
-          .tbl-detail-title {
-            .tbl-btns {
-              .btn-basic {
-                .open {
-                  width: 16px;
-                  height: 16px;
-                  @include bgStyle('ico-dropdown-down-default.svg', 16px);
-                }
-              }
-              .btn-ico {
-                &.close {
-                  @include bgStyle('ico-dropdown-up-default.svg', 16px);
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
   .toggle-box {
     position: absolute;
     left: 0;
