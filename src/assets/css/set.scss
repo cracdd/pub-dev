@@ -49,9 +49,50 @@ $colorBox-yellow:#f1c35b;
 
 
 
-.container{
-    .contents-r{
 
+
+
+
+.container{
+
+//★Main
+    .contents-c{
+        .contents-c-body{
+            .titleBox{
+                @include between();
+                margin-bottom:30px;
+                &__btns{
+                    a{
+                        margin-left:6px;
+                    }
+                }
+            }
+
+            .formBox{
+                ol{
+                    padding:0 10px;
+                    dt, dd{
+                        display: inline-block;
+                        margin-bottom:12px;
+                    }
+                    dt{
+                        width:82px;
+                        color:#1d1d1d;
+                        font-weight: 600;
+                        font-size: 14px;
+                    }
+                    dd{
+                        
+                    }
+                }
+            }
+        }
+    }
+
+
+
+//★Detail
+    .contents-r{
         
 //*****사용자 상태 *******
 
