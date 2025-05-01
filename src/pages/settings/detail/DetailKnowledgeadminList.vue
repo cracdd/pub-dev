@@ -3,7 +3,7 @@
   <div class="sample-box">
     <!--admin-->
     <section class="card">
-      <div class="titleBox mb30">
+      <div class="titleBox mb10">
         <div class="text-title">지식창고 메뉴관리</div>
         <div class="titleBox__btns">
           <a href="javascript:;" class="btn-sm btn-soft">메뉴추가</a>
@@ -85,8 +85,8 @@
 
     <!--List-->
     <section class="card">
-      <div class="titleBox mb30">
-        <div class="text-title lg">지식창고 메뉴관리</div>
+      <div class="titleBox mb10">
+        <div class="text-title">지식창고 메뉴관리</div>
         <div class="titleBox__btns">
           <a href="javascript:;" class="btn-sm btn-soft">메뉴추가</a>
           <a href="javascript:;" class="btn-sm btn-ghost">게시물 관리</a>
@@ -120,8 +120,8 @@
 
     <!--view-->
     <section class="card">
-      <div class="titleBox mb30">
-        <div class="text-title lg">지식창고 메뉴관리</div>
+      <div class="titleBox mb10">
+        <div class="text-title">지식창고 메뉴관리</div>
         <div class="titleBox__btns">
           <a href="javascript:;" class="btn-sm btn-soft">메뉴추가</a>
           <a href="javascript:;" class="btn-sm btn-ghost">게시물 관리</a>
@@ -153,8 +153,8 @@
 
     <!--write-->
     <section class="card">
-      <div class="titleBox mb30">
-        <div class="text-title lg">지식창고 메뉴관리</div>
+      <div class="titleBox mb10">
+        <div class="text-title">지식창고 메뉴관리</div>
         <div class="titleBox__btns">
           <a href="javascript:;" class="btn-sm btn-soft">메뉴추가</a>
           <a href="javascript:;" class="btn-sm btn-ghost">게시물 관리</a>

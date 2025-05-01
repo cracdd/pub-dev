@@ -1,8 +1,8 @@
 <template>
   <!--admin-->
   <section class="card">
-    <div class="titleBox mb30">
-      <div class="text-title lg">메뉴관리</div>
+    <div class="titleBox mb10">
+      <div class="text-title">메뉴관리</div>
       <div class="titleBox__btns">
         <a href="javascript:;" class="btn-sm btn-soft">메뉴추가</a>
       </div>

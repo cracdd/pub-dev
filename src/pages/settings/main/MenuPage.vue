@@ -1,7 +1,9 @@
 <template>
-  <section class="contents-c-body">
-    <div class="text-title lg">메뉴관리</div>
-    
+  <div class="settings-mid">
+    <div class="title-box">
+      <div class="title">지식창고관리</div>
+    </div>
+
     <div class="box-item type-line treeList">
       <ul class="tree depth1">
         <TreeNode
@@ -14,84 +16,82 @@
         />
       </ul>
     </div>
-  </section>
+  </div>
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, onMounted, watch, computed, reactive } from 'vue'
-import { global } from 'assets/js/publish/global'
-import TreeNode from 'components/TreeNode.vue'
-const selectedId = ref(null)
+  import {
+    defineProps,
+    defineEmits,
+    ref,
+    onMounted,
+    watch,
+    computed,
+    reactive,
+  } from 'vue';
+  import { global } from 'assets/js/publish/global';
+  import TreeNode from 'components/TreeNode.vue';
+  const selectedId = ref(null);
 
-const treeData = reactive([
-  {
-    id: 'cat01',
-    name: 'Category 01',
-    isOpen: true,
-    children: [
-      {
-        id: 'group01',
-        name: 'Group 01',
-        isOpen: true,
-        children: [
-          { id: 'sub01a', name: 'Sub Group 01' },
-          { id: 'sub01b', name: 'Sub Group 01' }
-        ]
-      },
-      {
-        id: 'group02',
-        name: 'Group 02',
-        isOpen: true,
-        children: [
-          { id: 'sub02a', name: 'Sub Group 01' },
-          { id: 'sub02b', name: 'Sub Group 01' }
-        ]
-      },
-      {
-        id: 'group03',
-        name: 'Group 03 - 자식없음'
-      }
-    ]
-  },
-  {
-    id: 'cat02-1',
-    name: 'Category 02',
-    children: [
-      { id: 'group04', name: 'Group 01' }
-    ]
-  },
-  {
-    id: 'cat02-2',
-    name: 'Category 02',
-    children: [
-      { id: 'group05', name: 'Group 01' }
-    ]
-  },
-  {
-    id: 'cat02-3',
-    name: 'Category 02',
-    children: [
-      { id: 'group06', name: 'Group 01' }
-    ]
-  },
-  {
-    id: 'cat02-4',
-    name: 'Category 02',
-    children: [
-      { id: 'group07', name: 'Group 01' }
-    ]
-  },
-  {
-    id: 'cat02-5',
-    name: 'Category 02',
-    children: [
-      { id: 'group08', name: 'Group 01' }
-    ]
-  }
-])
+  const treeData = reactive([
+    {
+      id: 'cat01',
+      name: 'Category 01',
+      isOpen: true,
+      children: [
+        {
+          id: 'group01',
+          name: 'Group 01',
+          isOpen: true,
+          children: [
+            { id: 'sub01a', name: 'Sub Group 01' },
+            { id: 'sub01b', name: 'Sub Group 01' },
+          ],
+        },
+        {
+          id: 'group02',
+          name: 'Group 02',
+          isOpen: true,
+          children: [
+            { id: 'sub02a', name: 'Sub Group 01' },
+            { id: 'sub02b', name: 'Sub Group 01' },
+          ],
+        },
+        {
+          id: 'group03',
+          name: 'Group 03 - 자식없음',
+        },
+      ],
+    },
+    {
+      id: 'cat02-1',
+      name: 'Category 02',
+      children: [{ id: 'group04', name: 'Group 01' }],
+    },
+    {
+      id: 'cat02-2',
+      name: 'Category 02',
+      children: [{ id: 'group05', name: 'Group 01' }],
+    },
+    {
+      id: 'cat02-3',
+      name: 'Category 02',
+      children: [{ id: 'group06', name: 'Group 01' }],
+    },
+    {
+      id: 'cat02-4',
+      name: 'Category 02',
+      children: [{ id: 'group07', name: 'Group 01' }],
+    },
+    {
+      id: 'cat02-5',
+      name: 'Category 02',
+      children: [{ id: 'group08', name: 'Group 01' }],
+    },
+  ]);
 
-const handleSelect = (id) => {
-  selectedId.value = id
-  console.log('선택된 ID:', id)
-}
+  const handleSelect = (id) => {
+    selectedId.value = id;
+    console.log('선택된 ID:', id);
+  };
 </script>
