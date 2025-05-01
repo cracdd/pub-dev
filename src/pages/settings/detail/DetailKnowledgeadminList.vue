@@ -75,7 +75,7 @@
         <tr>
           <th class="memo">설명</th>
           <td class="memo">
-            <textarea class="h150px" placeholder="내용을 입력하세요."></textarea>
+            <textarea class="h150px" placeholder="설명을 입력해주세요."></textarea>
           </td>
         </tr>
       </table>
