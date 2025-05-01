@@ -44,24 +44,25 @@
       :hide-pagination="true"
       class="table-wrap type-data"
     >
-    <template v-slot:top-right>
-      <a class="btn-sm btn-soft">삭제</a>
-    </template>
+      <template v-slot:top-right>
+        <a class="btn-sm btn-soft">삭제</a>
+      </template>
     </q-table>
   </section>
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, onMounted, watch } from 'vue'
-import { global } from 'assets/js/publish/global'
+  import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
+  import { global } from 'assets/js/publish/global';
 
-//테이블
-const columns = [    
+  //테이블
+  const columns = [
     {
-      name: 'phone',
+      name: 'name',
       align: 'center',
       label: '전화번호',
-      field: 'phone',
+      field: (row) => row.name,
+      format: (val) => `${val}`,
     },
     {
       name: 'id',
@@ -98,54 +99,54 @@ const columns = [
       align: 'center',
       label: '생성일자',
       field: 'date',
-    }
+    },
   ];
 
   const rows = [
     {
-      phone: '010-1234-5432',
+      name: '010-1234-5432',
       id: '1234567',
       mobileCarrier: 'SK Telecom',
       model: 'Samsung SM-S908N',
-      android:'14',
+      android: '14',
       version: '1.0.0',
-      date: '2025-04-30 13:21'
+      date: '2025-04-30 13:21',
     },
     {
-      phone: '010-1234-5432',
+      name: '010-1234-5434',
       id: '1234567',
       mobileCarrier: 'SK Telecom',
       model: 'Samsung SM-S908N',
-      android:'14',
+      android: '14',
       version: '1.0.0',
-      date: '2025-04-30 13:21'
+      date: '2025-04-30 13:21',
     },
     {
-      phone: '010-1234-5432',
+      name: '010-1234-5435',
       id: '1234567',
       mobileCarrier: 'SK Telecom',
       model: 'Samsung SM-S908N',
-      android:'14',
+      android: '14',
       version: '1.0.0',
-      date: '2025-04-30 13:21'
+      date: '2025-04-30 13:21',
     },
     {
-      phone: '010-1234-5432',
+      name: '010-1234-5436',
       id: '1234567',
       mobileCarrier: 'SK Telecom',
       model: 'Samsung SM-S908N',
-      android:'14',
+      android: '14',
       version: '1.0.0',
-      date: '2025-04-30 13:21'
+      date: '2025-04-30 13:21',
     },
     {
-      phone: '010-1234-5432',
+      name: '010-1234-5437',
       id: '1234567',
       mobileCarrier: 'SK Telecom',
       model: 'Samsung SM-S908N',
-      android:'14',
+      android: '14',
       version: '1.0.0',
-      date: '2025-04-30 13:21'
+      date: '2025-04-30 13:21',
     },
   ];
   const selected = ref([]);
@@ -153,9 +154,8 @@ const columns = [
   function getSelectedString() {
     return '';
   }
-
 </script>
 
 <style lang="scss" scoped>
-  @import "/src/assets/css/set.scss";
+  @import '/src/assets/css/set.scss';
 </style>
