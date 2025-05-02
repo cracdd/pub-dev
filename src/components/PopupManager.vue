@@ -18,6 +18,8 @@
   import PopupWorkingTimeRegister from 'components/popups/PopupWorkingTimeRegister.vue';
   import PopupHolidayRegister from 'components/popups/PopupHolidayRegister.vue';
   import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
+  import PopupUserModify from './popups/PopupUserModify.vue';
+  import PopupCategoryModify from './popups/PopupCategoryModify.vue';
 
   const popup = usePopupStore();
 
@@ -29,5 +31,7 @@
     [POPUP_TYPES.HISTORY]: PopupHistory,
     [POPUP_TYPES.REGISTER_WORKING]: PopupWorkingTimeRegister,
     [POPUP_TYPES.REGISTER_HOLIDAY]: PopupHolidayRegister,
+    [POPUP_TYPES.USER_MODIFY]: PopupUserModify,
+    [POPUP_TYPES.CATEGORY_MODIFY]: PopupCategoryModify,
   };
 </script>

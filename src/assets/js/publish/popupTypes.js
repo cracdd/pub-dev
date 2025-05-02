@@ -6,4 +6,6 @@ export const POPUP_TYPES = {
   HISTORY: 'popupHistory',
   REGISTER_WORKING: 'PopupWorkingTimeRegister',
   REGISTER_HOLIDAY: 'PopupHolidayRegister',
+  USER_MODIFY: 'PopupUserModify',
+  CATEGORY_MODIFY: 'PopupCategoryModify',
 };
