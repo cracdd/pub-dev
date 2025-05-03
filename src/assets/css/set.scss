@@ -194,6 +194,23 @@ $colorBox-yellow: #f1c35b;
     } // durationSetting
 
     .card {
+      &.multi{
+        display: flex;
+        flex-direction: row;
+        gap:47px;
+        .card__conts{
+          flex:1;
+          &__codeInfo{
+            display: flex;
+            flex-direction: row;
+            gap:40px;
+            .settings-mid{
+              flex:1;
+              border-top:none;
+            }
+          }
+        }
+      }
       .titleBox {
         @include between();
         margin-bottom: 30px;
