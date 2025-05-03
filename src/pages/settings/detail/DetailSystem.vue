@@ -108,7 +108,6 @@
             <a class="btn-sm btn-basic ml5">수정</a>
           </template>
       </q-table>
-      <h5 class="mt25">코드셋 정보 등록/수정</h5>
 
       <div class="card__conts__codeInfo">
         <div class="settings-mid pd0">
