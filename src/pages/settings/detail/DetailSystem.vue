@@ -331,11 +331,6 @@ const resultColumns = [
     top:0;
     z-index:2;
 }
-.q-table__card .q-table__middle{
-  border:1px solid #dedede;
-  border-top:none;
-  border-radius: 0 !important;
-}
 </style>
 
 
