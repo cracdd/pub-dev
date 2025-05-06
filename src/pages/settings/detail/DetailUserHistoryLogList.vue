@@ -13,7 +13,7 @@
           >
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -30,12 +30,12 @@
           <th></th>
           <td></td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
 
     <div class="tbl-detail-box mt40 toggle-box" v-show="open">
       <div class="tbl-detail-title">조건 설정</div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -61,7 +61,7 @@
             </select>
           </td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
 

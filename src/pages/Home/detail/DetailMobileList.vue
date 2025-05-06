@@ -67,7 +67,11 @@
         <option>카카오톡</option>
       </select>
       <label class="input-mix w-lg">
-        <input type="text" class="w100p" placeholder="검색어를 입력해 주세요.">
+        <input
+          type="text"
+          class="w100p"
+          placeholder="검색어를 입력해 주세요."
+        />
         <span class="unit">
           <a href="javascript:;" class="btn-ico ico-search"></a>
         </span>
@@ -99,10 +103,7 @@
           :key="fileIndex"
         >
           <label class="checkbox-item">
-            <input
-              type="checkbox"
-              v-model="file.checked"
-            />
+            <input type="checkbox" v-model="file.checked" />
             <span></span>
           </label>
           <p>
@@ -127,55 +128,111 @@
   </div>
 </template>
 <script setup>
-import { ref } from 'vue'
+  import { ref } from 'vue';
 
-const today = new Date().toISOString().slice(0, 10)
+  const today = new Date().toISOString().slice(0, 10);
 
-const startDate = ref(today)
-const endDate = ref(today)
+  const startDate = ref(today);
+  const endDate = ref(today);
 
-const startRef = ref(null)
-const endRef = ref(null)
+  const startRef = ref(null);
+  const endRef = ref(null);
 
-const showStartDate = () => {
-  setTimeout(() => startRef.value?.show(), 0)
-}
-const showEndDate = () => {
-  setTimeout(() => endRef.value?.show(), 0)
-}
+  const showStartDate = () => {
+    setTimeout(() => startRef.value?.show(), 0);
+  };
+  const showEndDate = () => {
+    setTimeout(() => endRef.value?.show(), 0);
+  };
 
-const onStartSelect = () => startRef.value?.hide()
-const onEndSelect = () => endRef.value?.hide()
+  const onStartSelect = () => startRef.value?.hide();
+  const onEndSelect = () => endRef.value?.hide();
 
-//데이터 구조: 날짜별 그룹화
-const fileGroups = ref([
-  {
-    date: '2025년 3월 31일 (화)',
-    files: [
-      { icon: 'type1', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false },
-      { icon: 'type2', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false },
-      { icon: 'type3', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false }
-    ]
-  },
-  {
-    date: '2025년 3월 30일 (월)',
-    files: [
-      { icon: 'type4', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false },
-      { icon: 'type1', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false },
-      { icon: 'type1', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false },
-      { icon: 'type1', time: '오후 08:22', phone: '010-2325-5628', callId: '2025-0101012345', code: '인001', name: '고애주', checked: false }
-    ]
-  }
-])
+  //데이터 구조: 날짜별 그룹화
+  const fileGroups = ref([
+    {
+      date: '2025년 3월 31일 (화)',
+      files: [
+        {
+          icon: 'type1',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+        {
+          icon: 'type2',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+        {
+          icon: 'type3',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+      ],
+    },
+    {
+      date: '2025년 3월 30일 (월)',
+      files: [
+        {
+          icon: 'type4',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+        {
+          icon: 'type1',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+        {
+          icon: 'type1',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+        {
+          icon: 'type1',
+          time: '오후 08:22',
+          phone: '010-2325-5628',
+          callId: '2025-0101012345',
+          code: '인001',
+          name: '고애주',
+          checked: false,
+        },
+      ],
+    },
+  ]);
 
-// ✅ 그룹 전체 체크 상태 확인
-const isAllChecked = (group) => {
-  return group.files.every(file => file.checked)
-}
+  // ✅ 그룹 전체 체크 상태 확인
+  const isAllChecked = (group) => {
+    return group.files.every((file) => file.checked);
+  };
 
-// ✅ 전체 선택/해제 토글
-const toggleAll = (group) => {
-  const shouldCheck = !isAllChecked(group)
-  group.files.forEach(file => (file.checked = shouldCheck))
-}
+  // ✅ 전체 선택/해제 토글
+  const toggleAll = (group) => {
+    const shouldCheck = !isAllChecked(group);
+    group.files.forEach((file) => (file.checked = shouldCheck));
+  };
 </script>

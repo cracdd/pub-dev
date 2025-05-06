@@ -8,4 +8,5 @@ export const POPUP_TYPES = {
   REGISTER_HOLIDAY: 'PopupHolidayRegister',
   USER_MODIFY: 'PopupUserModify',
   CATEGORY_MODIFY: 'PopupCategoryModify',
+  IMAGE_ZOOM: 'PopupImageZoom',
 };

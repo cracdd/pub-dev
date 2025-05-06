@@ -7,7 +7,7 @@
           <a class="btn-md btn-secondary">조회</a>
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -24,7 +24,7 @@
           <th></th>
           <td></td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
 
@@ -46,10 +46,9 @@
       <!-- 컬럼에 버튼 추가 -->
       <template v-slot:body-cell-modify="props">
         <q-td key="modify" :props="props">
-            <a class="btn-sm btn-soft" @click="openPopupUserModify()">수정</a>
+          <a class="btn-sm btn-soft" @click="openPopupUserModify()">수정</a>
         </q-td>
-      </template>      
-
+      </template>
     </q-table>
   </section>
 </template>
@@ -61,8 +60,8 @@
   import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
 
   //테이블
-const columns = [    
-{
+  const columns = [
+    {
       name: 'name',
       align: 'center',
       label: '사용자 이름',
@@ -109,35 +108,35 @@ const columns = [
 
   const rows = [
     {
-      name:'GSN Test_PCH(비번:Test123!)',
+      name: 'GSN Test_PCH(비번:Test123!)',
       mail: 'gsntest@gsneotek.com',
       group: '-',
       phone: '010-1111-2222',
-      authority:'USER',
+      authority: 'USER',
       employment: '재직중',
     },
     {
-      name:'GSN Test_PCH(비번:Test123!)',
+      name: 'GSN Test_PCH(비번:Test123!)',
       mail: 'gsntest@gsneotek.com',
       group: '-',
       phone: '010-1111-2222',
-      authority:'USER',
+      authority: 'USER',
       employment: '재직중',
     },
     {
-      name:'GSN Test_PCH(비번:Test123!)',
+      name: 'GSN Test_PCH(비번:Test123!)',
       mail: 'gsntest@gsneotek.com',
       group: '-',
       phone: '010-1111-2222',
-      authority:'USER',
+      authority: 'USER',
       employment: '재직중',
     },
     {
-      name:'GSN Test_PCH(비번:Test123!)',
+      name: 'GSN Test_PCH(비번:Test123!)',
       mail: 'gsntest@gsneotek.com',
       group: '-',
       phone: '010-1111-2222',
-      authority:'USER',
+      authority: 'USER',
       employment: '재직중',
     },
   ];
@@ -145,14 +144,12 @@ const columns = [
   function getSelectedString() {
     return '';
   }
-  
+
   const popup = usePopupStore();
 
   const openPopupUserModify = () => {
     popup.open(POPUP_TYPES.USER_MODIFY, {});
   };
-
-  
 </script>
 
 <style lang="scss" scoped>

@@ -4,9 +4,9 @@
     <div class="mBox-wrap">
       <div class="mBox-title">고애주님(2025-0101012345)</div>
       <div class="inner">
-        <div class="prev">
+        <div class="prev" @click="openPopupImageZoom()">
           <p class="item type-img active">
-            <img src="../../../assets/images/ex-img.png" alt="">
+            <img src="../../../assets/images/ex-img.png" alt="" />
           </p>
           <p class="item type-file">
             <i class="file-ico lg type4"></i>
@@ -55,5 +55,26 @@
   </section>
 </template>
 <script setup>
+  import { ref, onMounted, watch, computed } from 'vue';
+  import { usePopupStore } from 'stores/popup';
+  import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
+  const popup = usePopupStore();
 
+  const openPopupImageZoom = () => {
+    popup.open(POPUP_TYPES.IMAGE_ZOOM, {
+      message: '직접선택에서 열었어요!',
+      from: '직접선택',
+    });
+  };
+
+  // 팝업 결과 수신
+  watch(
+    () => popup.result,
+    (newVal) => {
+      if (newVal) {
+        console.log('팝업에서 받은 결과:', newVal);
+        // popup.result = null  // 필요 시 초기화
+      }
+    },
+  );
 </script>

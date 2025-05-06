@@ -13,7 +13,7 @@
           >
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -53,7 +53,7 @@
           <td>
             <div class="form-mix">
               <select class="w150px">
-                <option>부서서</option>
+                <option>부서</option>
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
@@ -76,12 +76,12 @@
             </select>
           </td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
 
     <div class="tbl-detail-box mt40 toggle-box" v-show="open">
       <div class="tbl-detail-title">상세 조건 설정</div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -133,7 +133,7 @@
           <th></th>
           <td></td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
 
@@ -299,7 +299,7 @@
   .toggle-box {
     position: absolute;
     left: 0;
-    top: 160px;
+    top: 190px;
     z-index: 10;
     width: 100%;
     border-radius: 0 0 10px 10px;

@@ -1,5 +1,4 @@
 <template>
-
   <section class="card-top">
     <div class="tbl-detail-box">
       <div class="tbl-detail-title">
@@ -8,7 +7,7 @@
           <a class="btn-md btn-secondary">조회</a>
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -32,43 +31,48 @@
             </select>
           </td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
-  
+
   <div class="flex-row realtime__title">
     <p class="text-title text-md">실시간 현황</p>
     <div class="time">
       2022-08-08 10:45:25
       <button type="button" class="play"></button>
       <button type="button" class="refresh"></button>
-      <button type="button" class="setting" id="popup-btn" @click="toggleDiv"></button>
+      <button
+        type="button"
+        class="setting"
+        id="popup-btn"
+        @click="toggleDiv"
+      ></button>
     </div>
   </div>
-  
+
   <!--자동갱신주기 팝업-->
   <div v-show="isVisible" class="popup">
     <p class="text-title">자동 갱신 주기</p>
     <div class="choice">
       <label class="radio-item">
-        <input type="radio" name="radio1" checked>
+        <input type="radio" name="radio1" checked />
         <span>5초</span>
       </label>
 
       <label class="radio-item">
-        <input type="radio" name="radio1">
+        <input type="radio" name="radio1" />
         <span>10초</span>
       </label>
 
       <label class="radio-item">
-        <input type="radio" name="radio1">
+        <input type="radio" name="radio1" />
         <span>20초</span>
       </label>
 
       <label class="radio-item">
-        <input type="radio" name="radio1">
+        <input type="radio" name="radio1" />
         <span>30초</span>
-      </label>      
+      </label>
     </div>
     <div class="btnArea-R">
       <a class="btn-sm btn-basic" @click="toggleDiv">닫기</a>
@@ -77,14 +81,14 @@
   </div>
 
   <section class="realTimeStatus">
-      <div>로그인<span>1</span></div>
-      <div>대기<span>0</span></div>
-      <div>통화중<span>0</span></div>
-      <div>후처리<span>1</span></div>
-      <div>IN<span>0</span></div>
-      <div>OUT<span>0</span></div>
-      <div>자리비움<span>0</span></div>
-      <div>미등록<span>0</span></div>
+    <div>로그인<span>1</span></div>
+    <div>대기<span>0</span></div>
+    <div>통화중<span>0</span></div>
+    <div>후처리<span>1</span></div>
+    <div>IN<span>0</span></div>
+    <div>OUT<span>0</span></div>
+    <div>자리비움<span>0</span></div>
+    <div>미등록<span>0</span></div>
   </section>
 
   <section class="card">
@@ -92,19 +96,19 @@
     <div class="durationSetting">
       <div class="durationSetting__time">
         <span class="colorbox__black"></span>
-        <input type="text" value="180" class="w50px">
+        <input type="text" value="180" class="w50px" />
       </div>
       <div class="durationSetting__time">
         <span class="colorbox__red"></span>
-        <input type="text" value="180" class="w50px">
+        <input type="text" value="180" class="w50px" />
       </div>
       <div class="durationSetting__time">
         <span class="colorbox__yellow"></span>
-        <input type="text" value="180" class="w50px">
+        <input type="text" value="180" class="w50px" />
       </div>
       <a href="javascript:;" class="btn-md btn-basic">적용</a>
     </div>
-    
+
     <q-table
       title="검색결과"
       style="height: 100%"
@@ -122,7 +126,7 @@
       <!-- 컬럼에 버튼 추가 -->
       <template v-slot:body-cell-logout="props">
         <q-td key="logout" :props="props">
-            <a class="btn-sm btn-soft">로그아웃</a>
+          <a class="btn-sm btn-soft">로그아웃</a>
         </q-td>
       </template>
 
@@ -132,25 +136,23 @@
           {{ props.value }}
         </q-td>
       </template>
-
     </q-table>
   </section>
-  
 </template>
 
 <script setup>
-import { defineProps, defineEmits, ref, onMounted, watch } from 'vue'
-import { global } from 'assets/js/publish/global'
+  import { defineProps, defineEmits, ref, onMounted, watch } from 'vue';
+  import { global } from 'assets/js/publish/global';
 
-//팝업
-const isVisible = ref(false)
+  //팝업
+  const isVisible = ref(false);
 
-const toggleDiv = () => {
-  isVisible.value = !isVisible.value
-}
+  const toggleDiv = () => {
+    isVisible.value = !isVisible.value;
+  };
 
-//테이블
-const columns = [    
+  //테이블
+  const columns = [
     {
       name: 'ID',
       align: 'center',
@@ -204,7 +206,7 @@ const columns = [
       align: 'center',
       label: '',
       field: 'logout',
-    }
+    },
   ];
 
   const rows = [
@@ -217,16 +219,15 @@ const columns = [
       deviceState: '대기중',
       direction: 'OUTTOUND',
       processTime: '00:08:22',
-    }
+    },
   ];
   const selected = ref([]);
 
   function getSelectedString() {
     return '';
   }
-
 </script>
 
 <style lang="scss" scoped>
-  @import "/src/assets/css/set.scss";
+  @import '/src/assets/css/set.scss';
 </style>

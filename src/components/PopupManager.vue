@@ -20,6 +20,7 @@
   import { POPUP_TYPES } from 'assets/js/publish/popupTypes';
   import PopupUserModify from './popups/PopupUserModify.vue';
   import PopupCategoryModify from './popups/PopupCategoryModify.vue';
+  import PopupImageZoom from './popups/PopupImageZoom.vue';
 
   const popup = usePopupStore();
 
@@ -33,5 +34,6 @@
     [POPUP_TYPES.REGISTER_HOLIDAY]: PopupHolidayRegister,
     [POPUP_TYPES.USER_MODIFY]: PopupUserModify,
     [POPUP_TYPES.CATEGORY_MODIFY]: PopupCategoryModify,
+    [POPUP_TYPES.IMAGE_ZOOM]: PopupImageZoom,
   };
 </script>

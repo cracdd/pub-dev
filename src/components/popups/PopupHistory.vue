@@ -63,47 +63,20 @@
                   </span>
                 </p>
               </div>
-
-              <div class="player-box">
-                <p class="player-info">
-                  <b><i> 고애주님 / 2025-0101_12345.wav </i></b>
-                </p>
-
-                <!-- 청취 시 활성화 : active -->
-                <ul class="player-item active">
-                  <li>
-                    <a href="#!" class="play-btn play-btn1"
-                      ><img src="../../assets/images/play-ico2.svg" alt=""
-                    /></a>
-                  </li>
-                  <li class="timer">
-                    <span>2:47</span>
-                    <i>/</i>
-                    <em>3:29</em>
-                  </li>
-                  <li class="bar">
-                    <span><i style="width: 60%"></i></span>
-                  </li>
-                  <li>
-                    <a href="#!" class="play-btn play-btn2"
-                      ><img src="../../assets/images/play-ico3.svg" alt=""
-                    /></a>
-                  </li>
-                </ul>
-              </div>
+              <CallPlayerBox />
             </div>
             <div class="content">
               <div class="chat-wrap">
                 <div class="chat-body">
                   <!-- 데이터 없을때 -->
-                  <!-- <div class="no-data">
+                  <div class="no-data">
                     등록된 파일이 없습니다<span class="desc"
                       >녹취 파일이 없어 통화 요약 정보가 제공되지
                       않습니다.</span
                     >
-                  </div> -->
+                  </div>
 
-                  <template
+                  <!-- <template
                     v-for="(item, index) in detailChatData"
                     :key="index"
                   >
@@ -115,7 +88,7 @@
                     <div v-else :class="['chat-item', item.type]">
                       <div class="text-msg" v-html="item.text"></div>
                     </div>
-                  </template>
+                  </template> -->
                 </div>
               </div>
             </div>
@@ -277,6 +250,7 @@
 
 <script setup>
   import { ref, watch, onMounted } from 'vue';
+  import CallPlayerBox from 'components/CallPlayerBox.vue';
 
   const props = defineProps({
     visible: Boolean,
@@ -360,9 +334,12 @@
     height: calc(100vh - 100px);
   }
   .popup-wrap.type-split .popup-body .split-box {
+    display: flex;
+    gap: 40px;
     height: inherit;
   }
   .popup-wrap.type-split .popup-body .split-box section {
+    flex: 1;
     display: flex;
     flex-direction: column;
   }

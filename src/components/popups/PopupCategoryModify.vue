@@ -15,7 +15,7 @@
             <div class="form-mix">
               <label>부서ID</label>
               <input type="text" placeholder="부서ID" class="w100p" />
-            </div>           
+            </div>
             <div class="form-mix">
               <label>부서명</label>
               <input type="text" placeholder="OB_1C(한고정)" class="w100p" />
@@ -38,18 +38,21 @@
               <label>사용여부</label>
               <div class="form-mix__radio">
                 <label class="radio-item">
-                  <input type="radio" name="radio1" checked>
+                  <input type="radio" name="radio1" checked />
                   <span>Y</span>
                 </label>
                 <label class="radio-item">
-                  <input type="radio" name="radio1">
+                  <input type="radio" name="radio1" />
                   <span>N</span>
                 </label>
               </div>
             </div>
             <div class="form-mix">
               <label>설명</label>
-              <textarea class="w20p h150px" placeholder="설명을 입력해 주세요."></textarea>
+              <textarea
+                class="w20p h150px"
+                placeholder="설명을 입력해 주세요."
+              ></textarea>
             </div>
           </form>
         </div>
@@ -77,7 +80,6 @@
 <script setup>
   import { ref, watch, onMounted } from 'vue';
   import CallDateBox from 'components/CallDateBox.vue';
-  
 
   const props = defineProps({
     visible: Boolean,
@@ -106,26 +108,26 @@
 </script>
 
 <style lang="scss" scoped>
-  .register-box{
-    .form-box{
-      .form-mix{
-        label{
+  .register-box {
+    .form-box {
+      .form-mix {
+        label {
           flex-basis: 200px;
         }
-        &__radio{
-          label{
-            margin-right:24px;
+        &__radio {
+          label {
+            margin-right: 24px;
           }
         }
       }
     }
   }
-  .popup-wrap{
-    &.w720px{
-      width:720px;
+  .popup-wrap {
+    &.w720px {
+      width: 720px;
     }
-    .popup-footer{
-      margin-top:20px;
+    .popup-footer {
+      margin-top: 20px;
     }
   }
 </style>

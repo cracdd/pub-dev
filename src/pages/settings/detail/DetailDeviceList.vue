@@ -7,7 +7,7 @@
           <a class="btn-md btn-secondary">조회</a>
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -24,7 +24,7 @@
           <th></th>
           <td></td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
 

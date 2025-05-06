@@ -7,7 +7,7 @@
           <a class="btn-md btn-secondary">조회</a>
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -30,7 +30,7 @@
             <input type="text" placeholder="사원ID" class="w140px" />
           </td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
 
@@ -56,7 +56,7 @@
       <!-- 컬럼에 버튼 추가 -->
       <template v-slot:body-cell-download="props">
         <q-td key="download" :props="props">
-            <a class="btn-sm btn-soft">다운</a>
+          <a class="btn-sm btn-soft">다운</a>
         </q-td>
       </template>
     </q-table>
@@ -69,7 +69,7 @@
   import CallDateBox from 'components/CallDateBox.vue';
 
   //테이블
-const columns = [    
+  const columns = [
     {
       name: 'download',
       align: 'center',
@@ -111,24 +111,24 @@ const columns = [
   const rows = [
     {
       id: '9234',
-      phone:'010-1111-2222',
-      logDate:'2025-04-03',
-      uploadTime:'2025-04-20 00:06:59',
-      logUrl:'/mobilelog/20250402/log_9315_20250403_0.zip',      
+      phone: '010-1111-2222',
+      logDate: '2025-04-03',
+      uploadTime: '2025-04-20 00:06:59',
+      logUrl: '/mobilelog/20250402/log_9315_20250403_0.zip',
     },
     {
       id: '9234',
-      phone:'010-1111-2222',
-      logDate:'2025-04-03',
-      uploadTime:'2025-04-20 00:06:59',
-      logUrl:'/mobilelog/20250402/log_9315_20250403_0.zip',      
+      phone: '010-1111-2222',
+      logDate: '2025-04-03',
+      uploadTime: '2025-04-20 00:06:59',
+      logUrl: '/mobilelog/20250402/log_9315_20250403_0.zip',
     },
     {
       id: '9234',
-      phone:'010-1111-2222',
-      logDate:'2025-04-03',
-      uploadTime:'2025-04-20 00:06:59',
-      logUrl:'/mobilelog/20250402/log_9315_20250403_0.zip',      
+      phone: '010-1111-2222',
+      logDate: '2025-04-03',
+      uploadTime: '2025-04-20 00:06:59',
+      logUrl: '/mobilelog/20250402/log_9315_20250403_0.zip',
     },
   ];
   const selected = ref([]);
@@ -140,7 +140,7 @@ const columns = [
 <style lang="scss" scoped>
   @import '/src/assets/css/set.scss';
 
-  .period-box{
-    width:140px;
+  .period-box {
+    width: 140px;
   }
 </style>

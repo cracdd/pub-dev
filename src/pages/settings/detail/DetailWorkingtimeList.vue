@@ -115,8 +115,6 @@
 
 <style scoped>
   .split-box {
-    display: flex;
-    gap: 10px;
     height: 100%;
   }
   .split-box section {

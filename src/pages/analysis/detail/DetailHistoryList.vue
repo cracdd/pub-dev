@@ -13,7 +13,7 @@
           >
         </div>
       </div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -39,7 +39,6 @@
               <input type="text" placeholder="직원이름" class="w150px" />
             </div>
           </td>
-
           <th>직원번호</th>
           <td><input type="text" placeholder="직원번호" class="w150px" /></td>
         </tr>
@@ -66,12 +65,12 @@
           <th></th>
           <td></td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
 
     <div class="tbl-detail-box mt40 toggle-box" v-show="open">
       <div class="tbl-detail-title">상세 조건 설정</div>
-      <table class="tbl-detail">
+      <q-markup-table class="tbl-detail">
         <colgroup>
           <col style="" />
           <col style="width: 33%" />
@@ -123,7 +122,7 @@
           <th></th>
           <td></td>
         </tr>
-      </table>
+      </q-markup-table>
     </div>
   </section>
 
@@ -378,7 +377,7 @@
   .toggle-box {
     position: absolute;
     left: 0;
-    top: 160px;
+    top: 190px;
     z-index: 10;
     width: 100%;
     border-radius: 0 0 10px 10px;
