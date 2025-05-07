@@ -1782,6 +1782,7 @@ Style Start
   font-size: 9px;
   font-weight: bold;
   color: #fff;
+  font-style: normal;
   background: #e34d4d;
   display: none;
 }
@@ -1844,6 +1845,7 @@ Style Start
 }
 .history-box.type-call .history-item .c .info2 .info2-item1 i {
   color: #666;
+  font-style: normal;
 }
 .history-box.type-call .history-item .c .info2 .info2-item1 i::after {
   content: '';
@@ -2180,6 +2182,7 @@ Style Start
   word-break: break-all;
 }
 .player-box .player-info b i {
+  font-style: normal;
   min-height: 20px;
 }
 .player-box .player-info b::before {
@@ -2615,6 +2618,7 @@ Style Start
 }
 .mBox-file-wrap ul .mBox-file ol i {
   color: #767676;
+  font-style: normal;
 }
 .mBox-file-wrap ul .mBox-file ol i::after {
   display: inline-flex;
@@ -2767,6 +2771,7 @@ Style Start
 .list-filter i {
   font-size: 13px;
   font-weight: 600;
+  font-style: normal;
 }
 .list-filter ul li {
   font-size: 13px;
@@ -3139,7 +3144,16 @@ h5.guide-tit {
 .register-box .type-datepicker {
   flex: 1;
 }
-
+.calendar-box {
+  height: 100%;
+  border: 1px solid #ddd;
+  overflow-y: auto;
+  &.type-full {
+    .q-calendar {
+      height: calc(100% - 66px);
+    }
+  }
+}
 .chart-box {
 }
 
