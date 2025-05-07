@@ -66,6 +66,7 @@ dt,
 dd {
   list-style: none;
 }
+/*
 i,
 em,
 address,
@@ -73,6 +74,7 @@ u {
   font-style: normal;
   text-decoration: none;
 }
+  250507 에디터 italic, underline 적용 문제로 주석처리*/
 button {
   cursor: pointer;
   margin-bottom: 0;

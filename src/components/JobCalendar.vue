@@ -137,7 +137,7 @@ const handleMonthChange = ({ start, end }) => {
 const getColor = (event) => {
   if (event.type === 'dept') return 'red'
   if (event.type === 'employee') return 'indigo'
-  if (event.type === 'data') return 'tan'
+  if (event.type === 'data') return ''
   return 'primary'
 }
 
@@ -165,16 +165,18 @@ onMounted(() => {
   margin: 0 auto;
   height : 100%;
   /* height: 700px; */
-  /* border: 1px solid #ccc; */
+  border: 1px solid #dedede;
 }
 
 .event-content {
   white-space: pre-line;
-  text-align: center;
   line-height: 1.2;
-  border-radius: 10px;
-  font-size: 12px;
-  padding: 4px;
-  color: rgb(255, 255, 255);
+  font-size: 9px;
+  color: #e34d4d;
+  background: none;
+  padding:3px 10px;
+  margin-top:20px;
 }
+
+
 </style>

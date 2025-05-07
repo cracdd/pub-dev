@@ -157,14 +157,14 @@ let chartData = ref({
         {
           type: 'bar', // 바 차트
           label: '총건수',
-          backgroundColor:  ["#6495ed"],  // 부드러운 배경색
+          backgroundColor:  ["#f4c448"],  // 부드러운 배경색
           borderColor: 'RGBA( 100, 149, 237, 1 )',
           data: [50,20,40,5,67,89,33,88,99,33]  // 기본 데이터
         },
         {
           type: 'bar', // 바 차트
           label: '총시간',
-          backgroundColor:  ['#9acd32'],
+          backgroundColor:  ['#999'],
           borderColor: 'RGBA( 154, 205, 50, 1 )',
           data: [150,80,120,10,120,500,120,200,250,133] // 기본 데이터
         }
@@ -202,7 +202,7 @@ function chartData1(data){
         {
           type: 'bar', // 바 차트
           label: '총건수',
-          backgroundColor: ["#6495ed"],
+          backgroundColor: ["#f4c448"],
           borderColor: 'RGBA( 100, 149, 237, 1 )',
           data: dashboard2Data.value.map(item => item.nOffered),
           // order: 2, // 바 차트를 뒤로 보냄
@@ -210,7 +210,7 @@ function chartData1(data){
         {
           type: 'bar', // 바 차트
           label: '총시간',
-          backgroundColor: ['#9acd32'],
+          backgroundColor: ['#999'],
           borderColor: 'RGBA( 154, 205, 50, 1 )',
           data: dashboard2Data.value.map(item => item.tAnswered == null?0:item.tAnswered),
           // order: 2, // 바 차트를 뒤로 보냄
@@ -223,13 +223,13 @@ function chartData1(data){
       datasets: [
         {
           label: '총건수',
-          backgroundColor: ["#f0f0f0"],  // 부드러운 배경색
+          backgroundColor: ["#f4c448"],  // 부드러운 배경색
           borderColor: 'RGBA( 220, 220, 220, 1 )',
           data: [0.1]  // 기본 데이터
         },
         {
           label: '총시간',
-          backgroundColor: ["#f0f0f0"],
+          backgroundColor: ["#999"],
           borderColor: 'RGBA( 220, 220, 220, 1 )',
           data: [0.1]
         }
@@ -313,4 +313,5 @@ let options2 = ref({
       height: 100%;
     }
   }
+    
 </style>
