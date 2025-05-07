@@ -225,12 +225,12 @@
     },
   ]);
 
-  // ✅ 그룹 전체 체크 상태 확인
+  // 그룹 전체 체크 상태 확인
   const isAllChecked = (group) => {
     return group.files.every((file) => file.checked);
   };
 
-  // ✅ 전체 선택/해제 토글
+  // 전체 선택/해제 토글
   const toggleAll = (group) => {
     const shouldCheck = !isAllChecked(group);
     group.files.forEach((file) => (file.checked = shouldCheck));

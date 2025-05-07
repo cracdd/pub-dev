@@ -71,7 +71,9 @@ const sideList = ref([
     items: [
       { label: '통화이력', path: 'history' },
       { label: '통화통계', path: 'statistics' },
-      { label: '데이터분석', path: 'data' }
+      { label: '데이터분석', path: 'data' },
+      { label: '시각화통계1', path: 'visualone' },
+      { label: '시각화통계2', path: 'visualtwo' }
     ]
   },
   {
@@ -95,7 +97,7 @@ const sideList = ref([
 ])
 
 
-// ✅ 활성 상태
+//활성 상태
 const activeDepth1 = ref(0)
 const activeDepth2 = ref(0)
 

@@ -1,6 +1,6 @@
 <template>
   <!-- 통계 레이아웃 case 1 -->
-  <!-- <section class="card-top">
+<section class="card-top">
     <div class="tbl-detail-box">
       <div class="tbl-detail-title">
         조건 설정
@@ -93,10 +93,10 @@
       <h5>시간대별 통화건수</h5>
       <div class="chart-box mt10">차트영역</div>
     </div>
-  </section> -->
+  </section>
 
   <!-- 통계 레이아웃 case 2 -->
-  <section class="card-top">
+  <!-- <section class="card-top">
     <div class="tbl-detail-box">
       <div class="tbl-detail-title">
         조건 설정
@@ -184,7 +184,7 @@
         <div>차트영역</div>
       </div>
     </div>
-  </section>
+  </section> -->
 </template>
 
 <script setup>

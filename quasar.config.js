@@ -23,14 +23,15 @@ module.exports = configure(function (/* ctx */) {
     boot: [
       'axios',
       // 'ckeditor',
-      'click-outside'
+      'click-outside',
+      'qcalendar'
     ],
 
     // https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#css
     css: [
-      // '/common.css'
+      '~quill/dist/quill.core.css',
+      '~quill/dist/quill.snow.css'
     ],
-
     // https://github.com/quasarframework/quasar/tree/dev/extras
     extras: [
       'material-icons'

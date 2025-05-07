@@ -123,6 +123,20 @@ const routes = [
           detail: () => import('pages/analysis/detail/DetailDataList.vue'),
         },
       },
+      {
+        path: 'visualone',
+        components: {
+          main: () => import('pages/analysis/main/VisualOnePage.vue'),
+          detail: () => import('pages/analysis/detail/DetailVisualOne.vue'),
+        },
+      },
+      {
+        path: 'visualtwo',
+        components: {
+          main: () => import('pages/analysis/main/VisualTwoPage.vue'),
+          detail: () => import('pages/analysis/detail/DetailVisualTwo.vue'),
+        },
+      },
     ],
   },
   {

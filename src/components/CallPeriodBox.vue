@@ -72,7 +72,7 @@
 <script setup>
   import { ref } from 'vue';
 
-  // ✅ 날짜 초기값은 오늘로
+  // 날짜 초기값은 오늘로
   const today = new Date().toISOString().slice(0, 10);
 
   const startDate = ref(today);
