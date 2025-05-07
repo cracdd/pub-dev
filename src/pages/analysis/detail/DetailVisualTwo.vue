@@ -351,4 +351,7 @@ let options = {
       height: 100%;
     }
   }
+  .chart-box{
+    margin-top:30px;
+  }
 </style>
