@@ -110,14 +110,14 @@ let chartData = ref({
         {
           type: 'bar', // 바 차트
           label: '총건수',
-          backgroundColor:  ["#6495ed"],  // 부드러운 배경색
+          backgroundColor:  ["#f4c448"],  // 부드러운 배경색
           borderColor: 'RGBA( 100, 149, 237, 1 )',
           data: [50,20,40,5,67,89,33,88,99,33]  // 기본 데이터
         },
         {
           type: 'bar', // 바 차트
           label: '총시간',
-          backgroundColor:  ['#9acd32'],
+          backgroundColor:  ['#999'],
           borderColor: 'RGBA( 154, 205, 50, 1 )',
           data: [150,80,120,10,120,500,120,200,250,133] // 기본 데이터
         }
@@ -264,9 +264,9 @@ onMounted(() => {
       datasets: [
         {
           borderWidth: 5,
-          backgroundColor: ["#F48FB1", "#AAAAAA", "#D81B60", "#1E88E5", "#FDD835"],
-          hoverBackgroundColor: ["#F48FB1", "#AAAAAA", "#D81B60", "#1E88E5", "#FDD835"],
-          hoverBorderColor: ["#F48FB1", "#AAAAAA", "#D81B60", "#1E88E5", "#FDD835"],
+          backgroundColor: ["#77a6b8", "#e85a70", "#999999", "#f4c448", "#FDD835"],
+          hoverBackgroundColor: ["#77a6b8", "#e85a70", "#999999", "#f4c448", "#FDD835"],
+          hoverBorderColor: ["#77a6b8", "#e85a70", "#999999", "#f4c448", "#FDD835"],
           data: [Number(10) || 0, Number(20) || 0, Number(30) || 0, Number(40) || 0],
         },
       ],
