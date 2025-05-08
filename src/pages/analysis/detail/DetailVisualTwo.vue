@@ -71,7 +71,7 @@
         </select>
       </div>
       <div class="chart-box">
-        <div><Line v-if="loaded" :data="chartData" :options="options2" /></div>
+        <Line v-if="loaded" :data="chartData" :options="options_bar1" />
       </div>
     </div>
     <div class="card">
@@ -85,7 +85,7 @@
         </select>
       </div>
       <div class="chart-box">
-        <div><Pie :data="dataAgent1" :options="options" /></div>
+        <Pie :data="dataAgent1" :options="options_pie1" />
       </div>
     </div>
   </section>
@@ -232,7 +232,8 @@
     loaded.value = true;
   }
 
-  let options2 = ref({
+  //bar차트 - 건당 평균 통화시간 option
+  let options_bar1 = ref({
     scales: {
       x: {
         beginAtZero: true,
@@ -291,7 +292,7 @@
       },
     },
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
     elements: {
       arc: {
         borderWidth: 2,
@@ -354,7 +355,8 @@
     ],
   });
 
-  let options = {
+  //pie차트 - 대상 유형 비율 option
+  let options_pie1 = {
     radius: '100%',
     plugins: {
       datalabels: {

@@ -412,6 +412,8 @@ aside .nav .depth2 .depth2-link.active {
   justify-content: flex-start;
   padding: 20px;
   min-width: 1px;
+  height: 100vh;
+  overflow-y: auto;
 }
 
 /*====================================================
@@ -3155,8 +3157,8 @@ h5.guide-tit {
   }
 }
 .chart-box {
+  height: 100%;
 }
-
 .split-box {
   display: flex;
   gap: 10px;

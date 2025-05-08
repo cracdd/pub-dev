@@ -82,8 +82,13 @@
   </section>
   <section class="card card-column-auto">
     <h5>전체실적</h5>
-    <div class="chart-box">
-      <Line v-if="loaded" :data="chartData" :options="options2" />
+    <div class="chart-box mt10">
+      <Line
+        v-if="loaded"
+        :data="chartData"
+        :options="options_bar1"
+        :style="style_bar1"
+      />
     </div>
   </section>
   <section class="card-row mt10">
@@ -101,7 +106,7 @@
     <div class="card">
       <h5>시간대별 통화건수</h5>
       <div class="chart-box mt10">
-        <Line v-if="loaded" :data="chartData" :options="options2" />
+        <Line v-if="loaded" :data="chartData" :options="options_bar2" />
       </div>
     </div>
   </section>
@@ -301,7 +306,8 @@
     loaded.value = true;
   }
 
-  let options2 = ref({
+  //bar차트 - 전체실적 option
+  let options_bar1 = ref({
     scales: {
       x: {
         beginAtZero: true,
@@ -360,7 +366,83 @@
       },
     },
     responsive: true,
-    maintainAspectRatio: true,
+    maintainAspectRatio: false,
+    elements: {
+      arc: {
+        borderWidth: 2,
+      },
+    },
+    animation: {
+      duration: 1000,
+    },
+  });
+
+  //bar차트 - 전체실적 style
+  let style_bar1 = ref({
+    height: `${200}px`,
+  });
+
+  //bar차트 - 시간대별 통화건수 option
+  let options_bar2 = ref({
+    scales: {
+      x: {
+        beginAtZero: true,
+        grid: {
+          color: 'transparent',
+        },
+      },
+    },
+    animations: {
+      radius: {
+        duration: 400,
+        easing: 'linear',
+        loop: (context) => context.active,
+      },
+    },
+    hoverRadius: 12,
+    interaction: {
+      mode: 'nearest',
+      intersect: false,
+      axis: 'x',
+    },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          boxWidth: 12,
+          boxHeight: 12,
+          usePointStyle: true,
+          pointStyle: 'rect',
+          font: {
+            size: 12,
+          },
+        },
+      },
+      tooltip: {
+        // mode: 'index',  // 같은 인덱스에 있는 데이터 모두 표시
+        // intersect: false,  // 교차 여부 무시
+        // callbacks: {
+        //   // 툴팁 정렬 콜백
+        //   sort(a, b) {
+        //     console.log("a : ", a);
+        //     const order = { '요청호': 1, '응대호': 2, '응답률(%)': 3, '서비스레벨(%)': 4 };
+        //     console.log("Sort callback - a:", a.dataset.label, ", b:", b.dataset.label);
+        //     return order[a.dataset.label] - order[b.dataset.label];
+        //   },
+        //   label(tooltipItem) {
+        //     console.log('Tooltip Item:', tooltipItem);
+        //     return `${tooltipItem.dataset.label}: ${tooltipItem.raw}`;
+        //   },
+        // },
+        boxWidth: 15,
+        bodyFont: {
+          size: 14,
+        },
+      },
+    },
+    responsive: true,
+    maintainAspectRatio: false,
     elements: {
       arc: {
         borderWidth: 2,
@@ -372,7 +454,7 @@
   });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .card-row {
     .card {
       height: 100%;

@@ -1,20 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
-  <defs>
-    <clipPath id="clip-path">
-      <rect id="사각형_38878" data-name="사각형 38878" width="15.2" height="26.047" transform="translate(0 0)" fill="none"/>
-    </clipPath>
-  </defs>
-  <g id="ico-recording-green" transform="translate(8)">
-    <rect id="사각형_36999" data-name="사각형 36999" width="32" height="32" transform="translate(-8)" fill="none"/>
-    <g id="그룹_39050" data-name="그룹 39050" transform="translate(0 3)">
-      <g id="그룹_39050-2" data-name="그룹 39050" clip-path="url(#clip-path)">
-        <path id="패스_16130" data-name="패스 16130" d="M7.634,18.908a2.932,2.932,0,0,0,2.933-2.931V8.468A2.933,2.933,0,1,0,4.7,8.36q0,.054,0,.108v7.507a2.932,2.932,0,0,0,2.932,2.932h0Z" fill="#3bae3a"/>
-        <path id="패스_16131" data-name="패스 16131" d="M14.276,15.621a1.1,1.1,0,1,0-2.2,0,4.208,4.208,0,0,1-4.442,3.91,4.207,4.207,0,0,1-4.442-3.915,1.1,1.1,0,0,0-2.2,0h0A6.3,6.3,0,0,0,6.54,21.643c0,.015-.005.024-.005.039v2.165H5.028a1.1,1.1,0,0,0,0,2.2h5.215a1.1,1.1,0,0,0,0-2.2H8.733V21.686c0-.015-.005-.024-.005-.039a6.3,6.3,0,0,0,5.548-6.026" fill="#3bae3a"/>
-        <line id="선_1457" data-name="선 1457" x2="2.019" y2="1.282" transform="translate(1 4.529)" fill="none" stroke="#3bae3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-        <line id="선_1458" data-name="선 1458" x2="0.508" y2="2.227" transform="translate(5.447 1)" fill="none" stroke="#3bae3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-        <line id="선_1459" data-name="선 1459" x1="0.958" y2="2.088" transform="translate(9.642 1.353)" fill="none" stroke="#3bae3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-        <line id="선_1460" data-name="선 1460" x1="1.925" y2="1.31" transform="translate(12.275 4.6)" fill="none" stroke="#3bae3a" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"/>
-      </g>
+<svg data-name="그룹 39151" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <clipPath id="7pdpcv2ena">
+            <path data-name="사각형 39010" style="fill:none" d="M0 0h32v32H0z"/>
+        </clipPath>
+    </defs>
+    <g data-name="그룹 39155" style="clip-path:url(#7pdpcv2ena)">
+        <path data-name="패스 16488" d="M27.672 8.741a.26.26 0 0 1-.174.291c-.347.178-.7.351-1.036.545A5.916 5.916 0 0 0 23.98 12.6c-.016.039-.022.089-.049.115-.061.058-.132.141-.2.142a.283.283 0 0 1-.2-.132c-.164-.289-.3-.59-.462-.882a5.6 5.6 0 0 0-2.646-2.452c-.191-.09-.389-.166-.573-.269-.076-.042-.17-.137-.171-.21a.323.323 0 0 1 .16-.219c.512-.3 1.05-.566 1.542-.9a5.26 5.26 0 0 0 1.717-2.116c.107-.217.2-.444.312-.656a.388.388 0 0 1 .212-.177c.117-.031.18.072.234.171.238.441.461.891.725 1.315a5.243 5.243 0 0 0 2.14 1.875c.263.135.537.248.8.383a.713.713 0 0 1 .16.148" transform="translate(1 1)" style="fill:#26a526"/>
+        <path data-name="패스 16489" d="M21.437 4.324a.2.2 0 0 1-.13.218c-.261.132-.522.262-.775.407a4.424 4.424 0 0 0-1.856 2.263c-.012.029-.016.067-.037.086-.045.043-.1.105-.151.106a.213.213 0 0 1-.153-.1c-.122-.216-.227-.441-.346-.66a4.187 4.187 0 0 0-1.979-1.831c-.142-.068-.29-.124-.428-.2-.057-.032-.126-.1-.128-.157a.243.243 0 0 1 .12-.164c.383-.227.785-.424 1.152-.672a3.932 3.932 0 0 0 1.284-1.582c.08-.163.146-.333.234-.491a.281.281 0 0 1 .159-.132c.088-.023.134.054.174.128.179.329.345.666.542.983a3.912 3.912 0 0 0 1.6 1.4c.2.1.4.185.6.286a.518.518 0 0 1 .12.111" transform="translate(.545 -.588)" style="fill:#26a526"/>
+        <path data-name="패스 16490" d="M15.641 22.526a2.932 2.932 0 0 0 2.933-2.931v-7.509a2.933 2.933 0 1 0-5.865-.108V19.593a2.932 2.932 0 0 0 2.932 2.932z" style="fill:#3aaf3a"/>
+        <path data-name="패스 16491" d="M22.283 19.239a1.1 1.1 0 1 0-2.2 0 4.208 4.208 0 0 1-4.442 3.91 4.207 4.207 0 0 1-4.441-3.915 1.1 1.1 0 0 0-2.2 0 6.3 6.3 0 0 0 5.548 6.027c0 .015-.005.024-.005.039v2.165h-1.508a1.1 1.1 0 0 0 0 2.2h5.215a1.1 1.1 0 0 0 0-2.2h-1.51v-2.204a6.3 6.3 0 0 0 5.548-6.026" style="fill:#3aaf3a"/>
     </g>
-  </g>
 </svg>
