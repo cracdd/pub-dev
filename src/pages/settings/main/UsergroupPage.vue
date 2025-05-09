@@ -3,7 +3,12 @@
     <div class="title-box">
       <div class="title">부서관리</div>
       <div class="btns">
-        <a href="javascript:;" class="btn-sm btn-basic" @click="openPopupCategoryModify()">수정</a>
+        <a
+          href="javascript:;"
+          class="btn-sm btn-basic"
+          @click="openPopupCategoryModify()"
+          >수정</a
+        >
       </div>
     </div>
     <div class="box-item type-line treeList">
@@ -105,5 +110,4 @@
   const openPopupCategoryModify = () => {
     popup.open(POPUP_TYPES.CATEGORY_MODIFY, {});
   };
-
 </script>

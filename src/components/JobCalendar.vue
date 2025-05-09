@@ -16,7 +16,7 @@
       no-active-date
       view="month"
       :key="calendarMode"
-      :day-height="calendarMode ? '' : 75"
+      :day-height="calendarMode ? '' : ''"
       :hoverable="true"
       :focusable="true"
       :focus-type="['day']"
@@ -210,12 +210,12 @@
       border-top: 1px solid #e0e0e0;
       background-color: #f5f5f7;
       .q-calendar-month__head--weekday {
+        font-size: 12px;
         padding: 7px 0;
       }
     }
     :deep(.q-calendar-month__body) {
       .q-calendar-month__week--wrapper {
-        //min-height: 120px !important;
         flex-grow: 1;
         .q-calendar-month__day {
           &.q-current-day {

@@ -9,4 +9,5 @@ export const POPUP_TYPES = {
   USER_MODIFY: 'PopupUserModify',
   CATEGORY_MODIFY: 'PopupCategoryModify',
   IMAGE_ZOOM: 'PopupImageZoom',
+  SEARCH_DEPARTMENT: 'PopupSearchDepartment',
 };

@@ -377,7 +377,7 @@
   .toggle-box {
     position: absolute;
     left: 0;
-    top: 185px;
+    top: 140px;
     z-index: 10;
     width: 100%;
     border-radius: 0 0 10px 10px;

@@ -50,6 +50,9 @@
         </q-td>
       </template>
     </q-table>
+    <a class="btn-sm btn-secondary" @click="openPopupSearchDepartment()"
+      >모달 - 부서검색</a
+    >
   </section>
 </template>
 
@@ -149,6 +152,10 @@
 
   const openPopupUserModify = () => {
     popup.open(POPUP_TYPES.USER_MODIFY, {});
+  };
+
+  const openPopupSearchDepartment = () => {
+    popup.open(POPUP_TYPES.SEARCH_DEPARTMENT, {});
   };
 </script>
 

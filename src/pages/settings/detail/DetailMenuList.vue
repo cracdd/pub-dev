@@ -1,6 +1,6 @@
 <template>
   <!--admin-->
-  <section class="card">
+  <section class="card single">
     <div class="titleBox mb10">
       <div class="text-title">메뉴관리</div>
       <div class="titleBox__btns">

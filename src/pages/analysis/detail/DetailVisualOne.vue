@@ -94,7 +94,7 @@
   <section class="card-row mt10">
     <div class="card">
       <h5>2025년 4월</h5>
-      <div class="calendar-box mt10">
+      <div class="calendar-box mt10 type-min">
         <JobCalendar
           :events="eventList"
           :calendarCheck="calendarCheck"
@@ -379,7 +379,7 @@
 
   //bar차트 - 전체실적 style
   let style_bar1 = ref({
-    height: `${200}px`,
+    height: `${170}px`,
   });
 
   //bar차트 - 시간대별 통화건수 option

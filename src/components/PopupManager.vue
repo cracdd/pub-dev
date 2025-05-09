@@ -21,6 +21,7 @@
   import PopupUserModify from './popups/PopupUserModify.vue';
   import PopupCategoryModify from './popups/PopupCategoryModify.vue';
   import PopupImageZoom from './popups/PopupImageZoom.vue';
+  import PopupSearchDepartment from './popups/PopupSearchDepartment.vue';
 
   const popup = usePopupStore();
 
@@ -35,5 +36,6 @@
     [POPUP_TYPES.USER_MODIFY]: PopupUserModify,
     [POPUP_TYPES.CATEGORY_MODIFY]: PopupCategoryModify,
     [POPUP_TYPES.IMAGE_ZOOM]: PopupImageZoom,
+    [POPUP_TYPES.SEARCH_DEPARTMENT]: PopupSearchDepartment,
   };
 </script>
