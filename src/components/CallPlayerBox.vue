@@ -29,7 +29,10 @@
       <li class="bar">
         <span><i style="width: 60%"></i></span>
       </li>
-      <li>
+      <li class="volume">
+        <div class="bar" v-show="volume">
+          <span><i style="width: 60%"></i></span>
+        </div>
         <a
           href="#"
           class="play-btn"

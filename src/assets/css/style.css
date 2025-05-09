@@ -598,9 +598,11 @@ Component style
 }
 
 textarea {
-  padding: 8px !important;
+  padding: 16px !important;
   resize: none;
   pointer-events: auto !important;
+  background: #fafafa;
+  border: 1px solid #fafafa !important;
 }
 
 select {
@@ -2233,6 +2235,21 @@ Style Start
   top: 0;
   display: inline-block;
   background: #666;
+}
+.player-box .player-item .volume {
+  position: relative;
+}
+.player-box .player-item .volume .bar {
+  position: absolute;
+  right: 24px;
+  top: -2px;
+  width: 180px;
+  height: 24px;
+  background-color: #fafafa;
+  box-shadow: 0 0px 6px rgba(0, 0, 0, 0.2);
+}
+.player-box .player-item .volume .bar i {
+  background: #3aaf3a;
 }
 .player-box .player-item li {
   display: flex;

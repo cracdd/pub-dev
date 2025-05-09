@@ -32,6 +32,18 @@
         </label>
       </div>
     </form>
+    <div class="title-box mt50">
+      <div class="title">명함문구 등록</div>
+      <div class="btns">
+        <a href="javascript:;" class="btn-sm btn-basic">적용</a>
+      </div>
+    </div>
+    <form class="form-box pd0">
+      <textarea
+        class="w100p h150px"
+        placeholder="텍스트를 입력해주세요."
+      ></textarea>
+    </form>
   </div>
 </template>
 
@@ -41,18 +53,19 @@
 </script>
 
 <style lang="scss" scoped>
-.form-mix{
-  flex-direction: column;
-  align-items: flex-start;
-  gap:16px;
-  .radio-item{
-    width:100% !important;
-    span{
-      .subText{
-        font-size:13px; color:#999;
-        padding-left:24px;
+  .form-mix {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    .radio-item {
+      width: 100% !important;
+      span {
+        .subText {
+          font-size: 13px;
+          color: #999;
+          padding-left: 24px;
+        }
       }
     }
   }
-}
 </style>
