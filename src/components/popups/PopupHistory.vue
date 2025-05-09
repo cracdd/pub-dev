@@ -321,7 +321,7 @@
   ]);
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .popup-wrap.type-split {
     position: relative;
   }

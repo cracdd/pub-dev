@@ -3,7 +3,7 @@
     <section class="left">
       <div class="card">
         <q-table
-          title=" 휴가 사용자 등록"
+          title="휴가 사용자 등록"
           style="height: 100%"
           flat
           separator="cell"
@@ -196,7 +196,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .split-box {
     display: flex;
     gap: 10px;

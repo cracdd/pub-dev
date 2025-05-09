@@ -1,6 +1,6 @@
 <template>
   <!-- 통계 레이아웃 case 1 -->
-<section class="card-top">
+  <section class="card-top">
     <div class="tbl-detail-box">
       <div class="tbl-detail-title">
         조건 설정
@@ -193,7 +193,7 @@
   import CallPeriodBox from 'components/CallPeriodBox.vue';
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .card-row {
     .card {
       height: 100%;

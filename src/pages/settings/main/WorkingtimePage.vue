@@ -94,7 +94,7 @@
     popup.open(POPUP_TYPES.REGISTER_WORKING, {});
   };
 </script>
-<style scoped>
+<style lang="scss" scoped>
   .tbl-box {
     margin-top: 64px;
   }

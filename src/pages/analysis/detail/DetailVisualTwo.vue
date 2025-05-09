@@ -410,7 +410,7 @@
   };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
   .card-row {
     .card {
       height: 100%;

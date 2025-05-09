@@ -279,9 +279,9 @@
   const rows = [
     {
       time: '2025-03-01 09:06',
-      org: 'IT_보상상',
+      org: 'IT_보상',
       employee_number: '1111',
-      name: '홍길동동',
+      name: '홍길동',
       total: '10',
       ib_receive: '5',
       ob_try: '5',
@@ -295,11 +295,11 @@
     },
   ];
 </script>
-<style scoped>
+<style lang="scss" scoped>
   .toggle-box {
     position: absolute;
     left: 0;
-    top: 190px;
+    top: 185px;
     z-index: 10;
     width: 100%;
     border-radius: 0 0 10px 10px;
