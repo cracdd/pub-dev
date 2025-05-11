@@ -66,17 +66,11 @@ dt,
 dd {
   list-style: none;
 }
-/*
+
 i,
 em,
 address,
 u {
-  font-style: normal;
-  text-decoration: none;
-}
-  250507 에디터 italic, underline 적용 문제로 주석처리*/
-em,
-address {
   font-style: normal;
   text-decoration: none;
 }
@@ -147,4 +141,31 @@ a:hover,
 a:focus,
 a:active {
   text-decoration: none;
+}
+
+/* q-editor reset */
+.q-editor {
+  ul,
+  ol,
+  li,
+  dl,
+  dt,
+  dd {
+    list-style: revert-layer;
+    margin: revert-layer;
+    padding: revert-layer;
+  }
+  i,
+  u {
+    font-style: revert-layer;
+    text-decoration: revert-layer;
+  }
+  hr,
+  legend {
+    position: revert-layer;
+    width: revert-layer;
+    font-size: revert-layer;
+    line-height: revert-layer;
+    overflow: revert-layer;
+  }
 }

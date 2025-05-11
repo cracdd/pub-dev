@@ -81,13 +81,13 @@
   </div>
 
   <section class="realTimeStatus">
-    <div>로그인<span>1</span></div>
+    <div>로그인<span>122</span></div>
     <div>대기<span>0</span></div>
     <div>통화중<span>0</span></div>
-    <div>후처리<span>1</span></div>
-    <div>IN<span>0</span></div>
+    <!-- <div>후처리<span>1</span></div> -->
+    <div>IN<span>03</span></div>
     <div>OUT<span>0</span></div>
-    <div>자리비움<span>0</span></div>
+    <!-- <div>자리비움<span>0</span></div> -->
     <div>미등록<span>0</span></div>
   </section>
 

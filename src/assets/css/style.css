@@ -1231,6 +1231,7 @@ select:hover {
 .table-wrap.type-data th,
 .table-wrap.type-data td {
   padding: 6px 10px;
+  white-space: nowrap;
   /* border-bottom: 1px solid #dedede;
   border-right: 1px solid #dedede; */
 }
@@ -3205,4 +3206,7 @@ h5.guide-tit {
     width: 100%;
     height: auto;
   }
+}
+.q-menu {
+  min-width: auto !important;
 }

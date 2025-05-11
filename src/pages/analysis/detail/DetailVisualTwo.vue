@@ -412,8 +412,9 @@
 
 <style lang="scss" scoped>
   .card-row {
+    align-content: unset;
     .card {
-      height: 100%;
+      flex-grow: 1;
     }
   }
   .chart-box {

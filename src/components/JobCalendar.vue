@@ -190,7 +190,7 @@
     color: #e34d4d;
     background: none;
     padding: 3px 10px;
-    margin-top: 20px;
+    // margin-top: 20px;
   }
 
   .q-chip {

@@ -1,6 +1,6 @@
 <template>
   <div class="popup-container" :class="visible ? 'active' : ''">
-    <div class="popup-wrap w720px">
+    <div class="popup-wrap">
       <div class="popup-header">
         <b class="title">수정</b>
         <a href="#" class="close" @click.prevent="onClose"></a>
@@ -31,7 +31,7 @@
               <input type="text" placeholder="" class="w100p" />
             </div>
             <div class="form-mix">
-              <label>만료 날짜</label>
+              <label>만료날짜</label>
               <CallDateBox />
             </div>
             <div class="form-mix">
@@ -109,10 +109,11 @@
 
 <style lang="scss" scoped>
   .register-box {
+    width: 600px;
     .form-box {
       .form-mix {
         label {
-          flex-basis: 200px;
+          flex-basis: 160px;
         }
         &__radio {
           label {

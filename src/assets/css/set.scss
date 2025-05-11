@@ -140,7 +140,7 @@ $colorBox-yellow: #f1c35b;
       display: flex;
       justify-content: center;
       div {
-        width: 150px;
+        flex: 1 1 150px;
         border-right: 1px solid #ededed;
         text-align: center;
         color: #767676;
@@ -194,20 +194,20 @@ $colorBox-yellow: #f1c35b;
     } // durationSetting
 
     .card {
-      &.multi{
+      &.multi {
         display: flex;
         flex-direction: row;
-        gap:47px;
-        .card__conts{
-          flex:1;
-          &__codeInfo{
+        gap: 47px;
+        .card__conts {
+          flex: 1;
+          &__codeInfo {
             display: flex;
             flex-direction: row;
-            gap:40px;
-            padding-top:54px;
-            .settings-mid{
-              flex:1;
-              border-top:none;
+            gap: 40px;
+            padding-top: 54px;
+            .settings-mid {
+              flex: 1;
+              border-top: none;
             }
           }
         }
@@ -410,3 +410,16 @@ $colorBox-yellow: #f1c35b;
     }
   } // contents-r
 } // container
+
+// .q-editor {
+//   :deep(.q-editor__content) {
+//     ul,
+//     ol,
+//     li,
+//     dl,
+//     dt,
+//     dd {
+//       list-style: auto;
+//     }
+//   }
+// }
