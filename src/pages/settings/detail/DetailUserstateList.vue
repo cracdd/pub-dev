@@ -47,36 +47,51 @@
         id="popup-btn"
         @click="toggleDiv"
       ></button>
-    </div>
-  </div>
 
-  <!--자동갱신주기 팝업-->
-  <div v-show="isVisible" class="popup">
-    <p class="text-title">자동 갱신 주기</p>
-    <div class="choice">
-      <label class="radio-item">
-        <input type="radio" name="radio1" checked />
-        <span>5초</span>
-      </label>
+      <!--자동갱신주기 팝업 // time안으로 위치 변경 -->
+      <div v-show="isVisible" class="popup">
+        <p class="text-title">자동 갱신 주기</p>
+        <div class="choice">
+          <label class="radio-item">
+            <input type="radio" name="radio1" checked />
+            <span>5초</span>
+          </label>
 
-      <label class="radio-item">
-        <input type="radio" name="radio1" />
-        <span>10초</span>
-      </label>
+          <label class="radio-item">
+            <input type="radio" name="radio1" />
+            <span>10초</span>
+          </label>
 
-      <label class="radio-item">
-        <input type="radio" name="radio1" />
-        <span>20초</span>
-      </label>
+          <label class="radio-item">
+            <input type="radio" name="radio1" />
+            <span>20초</span>
+          </label>
 
-      <label class="radio-item">
-        <input type="radio" name="radio1" />
-        <span>30초</span>
-      </label>
-    </div>
-    <div class="btnArea-R">
-      <a class="btn-sm btn-basic" @click="toggleDiv">닫기</a>
-      <a href="javascript:;" class="btn-sm btn-secondary">적용</a>
+          <label class="radio-item">
+            <input type="radio" name="radio1" />
+            <span>30초</span>
+          </label>
+        </div>
+        <p class="text-title mt20">지속 시간 설정</p>
+        <div class="durationSetting">
+          <div class="durationSetting__time">
+            <span class="colorbox__black"></span>
+            <input type="text" value="180" class="w50px" />
+          </div>
+          <div class="durationSetting__time">
+            <span class="colorbox__red"></span>
+            <input type="text" value="180" class="w50px" />
+          </div>
+          <div class="durationSetting__time">
+            <span class="colorbox__yellow"></span>
+            <input type="text" value="180" class="w50px" />
+          </div>
+        </div>
+        <div class="btnArea-R">
+          <a class="btn-sm btn-basic" @click="toggleDiv">닫기</a>
+          <a href="javascript:;" class="btn-sm btn-secondary">적용</a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -92,22 +107,7 @@
   </section>
 
   <section class="card">
-    <p class="card-title">지속시간설정</p>
-    <div class="durationSetting">
-      <div class="durationSetting__time">
-        <span class="colorbox__black"></span>
-        <input type="text" value="180" class="w50px" />
-      </div>
-      <div class="durationSetting__time">
-        <span class="colorbox__red"></span>
-        <input type="text" value="180" class="w50px" />
-      </div>
-      <div class="durationSetting__time">
-        <span class="colorbox__yellow"></span>
-        <input type="text" value="180" class="w50px" />
-      </div>
-      <a href="javascript:;" class="btn-md btn-basic">적용</a>
-    </div>
+    <!-- <p class="card-title">지속시간설정</p> -->
 
     <q-table
       title="검색결과"
@@ -210,6 +210,16 @@
   ];
 
   const rows = [
+    {
+      id: 'Test01',
+      name: '홍길동',
+      department: '보상',
+      phone: '010-1234-3456',
+      userState: '후처리',
+      deviceState: '대기중',
+      direction: 'OUTTOUND',
+      processTime: '00:08:22',
+    },
     {
       id: 'Test01',
       name: '홍길동',

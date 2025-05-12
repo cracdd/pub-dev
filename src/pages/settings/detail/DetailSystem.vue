@@ -55,9 +55,9 @@
           <a class="btn-sm btn-basic ml5">수정</a>
         </template>
       </q-table>
+      <h5 class="mt25">코드셋 정보 등록/수정</h5>
       <div class="settings-mid pd0">
-        <h5 class="mt25">코드셋 정보 등록/수정</h5>
-        <form class="form-box mt20">
+        <form class="form-box">
           <div class="form-mix">
             <label>코드셋 코드</label>
             <input type="text" placeholder="" value="AGT001" class="w100p" />
@@ -118,10 +118,10 @@
           <a class="btn-sm btn-basic ml5">수정</a>
         </template>
       </q-table>
-
+      <h5 class="mt25">코드 정보 등록/수정</h5>
       <div class="card__conts__codeInfo">
         <div class="settings-mid pd0">
-          <form class="form-box mt20">
+          <form class="form-box">
             <div class="form-mix">
               <label>코드</label>
               <input type="text" placeholder="" value="01" class="w100p" />
@@ -304,6 +304,24 @@
       explanation: '',
       use: '사용중',
     },
+    {
+      code: '11',
+      name: '점심식사',
+      explanation: '',
+      use: '사용중',
+    },
+    {
+      code: '11',
+      name: '점심식사',
+      explanation: '',
+      use: '사용중',
+    },
+    {
+      code: '11',
+      name: '점심식사',
+      explanation: '',
+      use: '사용중',
+    },
   ];
 
   const selected = ref([]);
@@ -320,7 +338,9 @@
     &.multi {
       .card__conts {
         .settings-mid {
+          border-top: none;
           .form-box {
+            margin-top: 20px;
             padding: 0;
             .form-mix {
               label {
