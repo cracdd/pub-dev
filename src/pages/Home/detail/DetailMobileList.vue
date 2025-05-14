@@ -79,8 +79,15 @@
     </div>
     <a href="javascript:;" class="btn-md btn-secondary">조회</a>
   </div>
-
+  <q-btn color="primary" @click="showTextLoading">로딩보기</q-btn>
   <section class="mBox-file-wrap">
+
+    <q-inner-loading
+      :showing="visible"
+      color="grey-6"
+      label="텍스트 변환중입니다."
+      label-style="font-size: 14px; color:#999;"
+    />
     <template v-for="(group, groupIndex) in fileGroups" :key="groupIndex">
       <!-- 날짜 헤더 -->
       <div class="flex-row">
@@ -145,6 +152,13 @@
     setTimeout(() => endRef.value?.show(), 0);
   };
 
+  const visible = ref(false);
+  const showSimulatedReturnData = ref(false);
+
+  function showTextLoading() {
+    visible.value = true;
+    showSimulatedReturnData.value = false;
+  }
   const onStartSelect = () => startRef.value?.hide();
   const onEndSelect = () => endRef.value?.hide();
 
@@ -235,4 +249,5 @@
     const shouldCheck = !isAllChecked(group);
     group.files.forEach((file) => (file.checked = shouldCheck));
   };
+
 </script>
