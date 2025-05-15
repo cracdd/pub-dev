@@ -3214,3 +3214,21 @@ h5.guide-tit {
 .q-inner-loading {
   z-index: 9999;
 }
+
+.view-mode-sm {
+  .popup-wrap {
+    width: 350px;
+    min-width: 350px;
+    .popup-body {
+      .list-item {
+        max-height: 300px;
+        overflow-y: auto;
+        a {
+          font-size: 13px;
+          height: auto;
+          white-space: normal;
+        }
+      }
+    }
+  }
+}
