@@ -407,6 +407,7 @@ aside .nav .depth2 .depth2-link.active {
 }
 
 .contents-r {
+  position: relative;
   flex: 1;
   align-items: normal;
   justify-content: flex-start;

@@ -27,13 +27,6 @@ $colorBox-yellow: #f1c35b;
   padding: 20px;
 }
 
-@mixin colorBox {
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-}
-
 @mixin between {
   display: flex;
   justify-content: space-between;
@@ -172,18 +165,22 @@ $colorBox-yellow: #f1c35b;
       &__time {
         display: flex;
         align-items: center;
-        margin-right: 12px;
-        .colorbox__black {
-          @include colorBox();
-          background-color: $colorBox-black;
-        }
-        .colorbox__red {
-          @include colorBox();
-          background-color: $colorBox-red;
-        }
-        .colorbox__yellow {
-          @include colorBox();
-          background-color: $colorBox-yellow;
+        margin-right: 15px;
+        .colorbox {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          padding: 0 !important;
+          margin: 0 !important;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          background-color: transparent;
+          border: none !important;
+          &::-webkit-color-swatch {
+            border-radius: 8px;
+            border: none;
+          }
         }
         input {
           margin-left: 6px;

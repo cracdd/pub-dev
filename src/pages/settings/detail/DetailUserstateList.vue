@@ -75,15 +75,15 @@
         <p class="text-title mt20">지속 시간 설정</p>
         <div class="durationSetting">
           <div class="durationSetting__time">
-            <span class="colorbox__black"></span>
+            <input type="color" class="colorbox" />
             <input type="text" value="180" class="w50px" />
           </div>
           <div class="durationSetting__time">
-            <span class="colorbox__red"></span>
+            <input type="color" class="colorbox" />
             <input type="text" value="180" class="w50px" />
           </div>
           <div class="durationSetting__time">
-            <span class="colorbox__yellow"></span>
+            <input type="color" class="colorbox" />
             <input type="text" value="180" class="w50px" />
           </div>
         </div>
