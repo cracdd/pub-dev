@@ -3210,3 +3210,6 @@ h5.guide-tit {
 .q-menu {
   min-width: auto !important;
 }
+.q-inner-loading {
+  z-index: 9999;
+}
